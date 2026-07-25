@@ -3,348 +3,444 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mexico Family Resorts — Christmas 2026 (Live Pricing)</title>
+<title>Mexico Family Resorts — Christmas 2026 (Verified)</title>
 <style>
-  :root {
-    --turquoise: #0d9488; --turquoise-light: #14b8a6;
-    --sand: #f5f0e8; --sand-dark: #e7dfd3;
-    --ocean: #0c4a6e; --ocean-light: #0369a1;
-    --gold: #d4a017; --dark: #1e293b; --gray: #64748b;
-    --light-gray: #f1f5f9; --white: #fff;
-    --green: #16a34a; --red: #dc2626; --amber: #eab308;
-  }
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; background:var(--sand); color:var(--dark); line-height:1.6; }
-  .hero { position:relative; min-height:440px; background:linear-gradient(135deg,var(--ocean),var(--turquoise)); display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; overflow:hidden; }
-  .hero::before { content:''; position:absolute; inset:0; background-image:url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1920&q=80'); background-size:cover; background-position:center; opacity:.3; }
-  .hero-content { position:relative; z-index:1; padding:2rem; max-width:800px; }
-  .hero h1 { font-size:2.5rem; font-weight:800; margin-bottom:.5rem; text-shadow:0 2px 20px rgba(0,0,0,.3); }
-  .hero .subtitle { font-size:1.1rem; opacity:.95; }
-  .hero .trip-details { display:inline-flex; gap:1.5rem; background:rgba(255,255,255,.15); backdrop-filter:blur(10px); padding:1rem 2rem; border-radius:16px; margin-top:1rem; flex-wrap:wrap; justify-content:center; }
-  .hero .trip-details div { text-align:center; }
-  .hero .trip-details .label { font-size:.7rem; text-transform:uppercase; letter-spacing:.05em; opacity:.8; }
-  .hero .trip-details .value { font-size:1rem; font-weight:700; }
-  .alert-bar { background:linear-gradient(90deg,#fef3c7,#fde68a); padding:.8rem 2rem; text-align:center; font-size:.88rem; font-weight:600; color:#92400e; }
-  .compare-section { max-width:1400px; margin:0 auto; padding:3rem 2rem 1rem; }
-  .section-title { font-size:1.7rem; font-weight:800; color:var(--ocean); margin-bottom:.4rem; }
-  .section-subtitle { color:var(--gray); margin-bottom:1.5rem; }
-  .compare-table-wrap { overflow-x:auto; border-radius:16px; box-shadow:0 4px 24px rgba(0,0,0,.08); background:#fff; }
-  .compare-table { width:100%; border-collapse:collapse; min-width:1050px; }
-  .compare-table th { background:var(--ocean); color:#fff; padding:.9rem 1rem; text-align:left; font-weight:700; font-size:.76rem; text-transform:uppercase; letter-spacing:.03em; }
-  .compare-table td { padding:.85rem 1rem; border-bottom:1px solid var(--light-gray); font-size:.84rem; vertical-align:top; }
-  .compare-table tr:hover { background:var(--sand); }
-  .compare-table .resort-name { font-weight:700; color:var(--ocean); }
-  .stars { color:var(--gold); }
-  .badge { display:inline-block; padding:.18rem .5rem; border-radius:20px; font-size:.66rem; font-weight:600; text-transform:uppercase; }
-  .badge-top { background:#dcfce7; color:#166534; }
-  .badge-value { background:#dbeafe; color:#1e40af; }
-  .badge-best { background:#fef3c7; color:#92400e; }
-  .price-cell { font-weight:700; color:var(--ocean); }
-  .strike { text-decoration:line-through; color:var(--gray); font-weight:400; font-size:.8em; }
-  .avail-yes { color:var(--green); font-weight:700; }
-  .avail-no { color:var(--red); font-weight:700; }
-  .resorts-section { max-width:1400px; margin:0 auto; padding:2rem 2rem 3rem; }
-  .resort-card { background:#fff; border-radius:24px; overflow:hidden; box-shadow:0 4px 24px rgba(0,0,0,.08); margin-bottom:2rem; transition:transform .2s,box-shadow .2s; }
-  .resort-card:hover { transform:translateY(-2px); box-shadow:0 8px 36px rgba(0,0,0,.12); }
-  .resort-top { padding:1.5rem 2rem; display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1rem; border-bottom:1px solid var(--light-gray); }
-  .resort-top h2 { font-size:1.35rem; color:var(--ocean); font-weight:800; }
-  .resort-top .loc { color:var(--gray); font-size:.86rem; margin-top:.2rem; }
-  .resort-top .rating-box { text-align:right; }
-  .resort-top .score { font-size:1.6rem; font-weight:800; color:var(--gold); }
-  .resort-top .score-label { font-size:.74rem; color:var(--gray); }
-  .resort-body { padding:1.5rem 2rem; }
-  .resort-desc { color:#334155; font-size:.93rem; margin-bottom:1.2rem; line-height:1.6; }
-  .price-row { display:grid; grid-template-columns:1fr 1fr 1fr; gap:1rem; margin-bottom:1.2rem; }
-  .price-box { background:var(--sand); border-radius:14px; padding:1.1rem; text-align:center; }
-  .price-box .label { font-size:.7rem; text-transform:uppercase; color:var(--gray); letter-spacing:.04em; margin-bottom:.3rem; }
-  .price-box .amount { font-size:1.4rem; font-weight:800; color:var(--ocean); }
-  .price-box .sub { font-size:.76rem; color:var(--gray); margin-top:.2rem; }
-  .price-box .deal { font-size:.72rem; color:var(--green); font-weight:600; margin-top:.15rem; }
-  .price-box.both { background:linear-gradient(135deg,#dcfce7,#bbf7d0); }
-  .price-box.both .amount { color:#166534; }
-  .price-box.unavail { background:#fee2e2; }
-  .price-box.unavail .amount { color:var(--red); font-size:1rem; }
-  @media(max-width:768px){ .price-row{grid-template-columns:1fr;} .hero h1{font-size:1.7rem;} .hero .trip-details{flex-direction:column;gap:.6rem;} }
-  .amenities { display:flex; flex-wrap:wrap; gap:.4rem; margin-bottom:1.2rem; }
-  .amenity { background:var(--light-gray); padding:.35rem .75rem; border-radius:20px; font-size:.76rem; font-weight:500; }
-  .info-line { font-size:.86rem; color:#334155; margin-bottom:.5rem; }
-  .info-line strong { color:var(--ocean); }
-  .cta-bar { display:flex; gap:.8rem; flex-wrap:wrap; margin-top:.5rem; }
-  .cta-btn { display:inline-flex; align-items:center; gap:.4rem; background:var(--turquoise); color:#fff; padding:.6rem 1.2rem; border-radius:10px; text-decoration:none; font-weight:700; font-size:.86rem; }
-  .cta-btn:hover { background:var(--turquoise-light); }
-  .cta-btn.secondary { background:var(--light-gray); color:var(--ocean); }
-  .avail-tag { display:inline-block; padding:.25rem .6rem; border-radius:8px; font-size:.76rem; font-weight:700; }
-  .avail-tag.green { background:#dcfce7; color:#166534; }
-  .avail-tag.red { background:#fee2e2; color:#991b1b; }
-  .avail-tag.amber { background:#fef3c7; color:#92400e; }
-  .winner { background:linear-gradient(135deg,#dcfce7,#bbf7d0); padding:.6rem 1.2rem; border-radius:10px; margin-bottom:1rem; font-size:.84rem; color:#166534; font-weight:600; }
-  .note-box { background:#fef9c3; border-radius:10px; padding:.8rem 1.2rem; font-size:.8rem; color:#854d0e; margin-top:.8rem; line-height:1.5; }
-  footer { background:var(--ocean); color:#fff; text-align:center; padding:2rem; }
-  footer .disclaimer { max-width:800px; margin:0 auto .8rem; font-size:.76rem; opacity:.7; line-height:1.5; }
-  footer .generated { font-size:.74rem; opacity:.5; }
+:root{--turquoise:#0d9488;--turquoise-l:#14b8a6;--sand:#f5f0e8;--sand-d:#e7dfd3;--ocean:#0c4a6e;--ocean-l:#0369a1;--gold:#d4a017;--dark:#1e293b;--gray:#64748b;--lg:#f1f5f9;--white:#fff;--green:#16a34a;--red:#dc2626}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--sand);color:var(--dark);line-height:1.6}
+.hero{position:relative;min-height:420px;background:linear-gradient(135deg,var(--ocean),var(--turquoise));display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background-image:url('https://www.riu.com/dam/Ficha-Hotel/Hotel-Riu-Palace-Costa-Mujeres/Playa/beach-hotel-riu-palace-costa-mujeres.jpg');background-size:cover;background-position:center;opacity:.25}
+.hero-c{position:relative;z-index:1;padding:2rem;max-width:800px}
+.hero h1{font-size:2.4rem;font-weight:800;margin-bottom:.4rem;text-shadow:0 2px 20px rgba(0,0,0,.3)}
+.hero .sub{font-size:1.05rem;opacity:.95}
+.hero .td{display:inline-flex;gap:1.5rem;background:rgba(255,255,255,.15);backdrop-filter:blur(10px);padding:1rem 2rem;border-radius:16px;margin-top:1rem;flex-wrap:wrap;justify-content:center}
+.hero .td div{text-align:center}
+.hero .td .l{font-size:.68rem;text-transform:uppercase;letter-spacing:.05em;opacity:.8}
+.hero .td .v{font-size:.95rem;font-weight:700}
+.alert{background:linear-gradient(90deg,#fef3c7,#fde68a);padding:.7rem 2rem;text-align:center;font-size:.85rem;font-weight:600;color:#92400e}
+.section{max-width:1400px;margin:0 auto;padding:2.5rem 2rem}
+.stitle{font-size:1.6rem;font-weight:800;color:var(--ocean);margin-bottom:.3rem}
+.ssub{color:var(--gray);margin-bottom:1.3rem;font-size:.92rem}
+.card{background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.08);margin-bottom:2.5rem}
+.card:hover{box-shadow:0 8px 36px rgba(0,0,0,.12)}
+.card-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem;padding:1.5rem 2rem;border-bottom:1px solid var(--lg)}
+.card-top h2{font-size:1.35rem;color:var(--ocean);font-weight:800}
+.card-top .loc{color:var(--gray);font-size:.85rem;margin-top:.2rem}
+.card-top .rb{text-align:right}
+.card-top .rb .sc{font-size:1.55rem;font-weight:800;color:var(--gold)}
+.card-top .rb .sl{font-size:.72rem;color:var(--gray)}
+.badge{display:inline-block;padding:.18rem .5rem;border-radius:20px;font-size:.66rem;font-weight:600;text-transform:uppercase;vertical-align:middle}
+.b-top{background:#dcfce7;color:#166534}
+.b-val{background:#dbeafe;color:#1e40af}
+.b-best{background:#fef3c7;color:#92400e}
+.b-warn{background:#fee2e2;color:#991b1b}
+.photo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;padding:1rem 2rem 0}
+.photo-grid img{width:100%;height:140px;object-fit:cover;border-radius:10px}
+.photo-grid .pcap{font-size:.7rem;color:var(--gray);margin-top:.2rem;text-align:center}
+.photo-item{text-align:center}
+.card-body{padding:1.5rem 2rem}
+.desc{color:#334155;font-size:.93rem;margin-bottom:1.2rem;line-height:1.65}
+.room-box{background:var(--sand);border-radius:14px;padding:1.3rem;margin-bottom:1.2rem}
+.room-box h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.04em;color:var(--gray);margin-bottom:.6rem;font-weight:700}
+.room-box .rn{font-size:1.05rem;font-weight:700;color:var(--ocean);margin-bottom:.3rem}
+.room-box .rs{font-size:.85rem;color:var(--dark);line-height:1.5}
+.room-box .rs strong{color:var(--ocean)}
+.sqft{display:inline-block;background:var(--ocean);color:#fff;padding:.25rem .7rem;border-radius:8px;font-size:.85rem;font-weight:700;margin-left:.5rem}
+.pricing{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:1.2rem}
+.pbox{border-radius:14px;padding:1.1rem;text-align:center}
+.pbox .pl{font-size:.68rem;text-transform:uppercase;color:var(--gray);letter-spacing:.04em;margin-bottom:.3rem}
+.pbox .pa{font-size:1.35rem;font-weight:800;color:var(--ocean)}
+.pbox .ps{font-size:.74rem;color:var(--gray);margin-top:.2rem}
+.pbox.pd{background:var(--sand)}
+.pbox.pg{background:linear-gradient(135deg,#dcfce7,#bbf7d0)}
+.pbox.pg .pa{color:#166534}
+.pbox.pr{background:#fee2e2}
+.pbox.pr .pa{color:var(--red);font-size:.95rem}
+.amenities{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.2rem}
+.am{background:var(--lg);padding:.32rem .7rem;border-radius:20px;font-size:.74rem;font-weight:500}
+.info-row{font-size:.85rem;color:#334155;margin-bottom:.4rem}
+.info-row strong{color:var(--ocean)}
+.atag{display:inline-block;padding:.22rem .55rem;border-radius:8px;font-size:.74rem;font-weight:700}
+.atag.g{background:#dcfce7;color:#166534}
+.atag.r{background:#fee2e2;color:#991b1b}
+.atag.a{background:#fef3c7;color:#92400e}
+.winner{background:linear-gradient(135deg,#dcfce7,#bbf7d0);padding:.55rem 1.1rem;border-radius:10px;margin-bottom:1rem;font-size:.83rem;color:#166534;font-weight:600}
+.cta{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:.4rem}
+.cbtn{display:inline-flex;align-items:center;gap:.35rem;padding:.55rem 1.1rem;border-radius:10px;text-decoration:none;font-weight:700;font-size:.84rem}
+.cbtn.p{background:var(--turquoise);color:#fff}
+.cbtn.p:hover{background:var(--turquoise-l)}
+.cbtn.s{background:var(--lg);color:var(--ocean)}
+.note{background:#fef9c3;border-radius:10px;padding:.7rem 1.1rem;font-size:.78rem;color:#854d0e;margin-top:.6rem;line-height:1.5}
+.quick-wrap{overflow-x:auto;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,.08);background:#fff}
+.quick{width:100%;border-collapse:collapse;min-width:950px}
+.quick th{background:var(--ocean);color:#fff;padding:.85rem .9rem;text-align:left;font-weight:700;font-size:.74rem;text-transform:uppercase;letter-spacing:.03em}
+.quick td{padding:.8rem .9rem;border-bottom:1px solid var(--lg);font-size:.82rem;vertical-align:top}
+.quick tr:hover{background:var(--sand)}
+.quick .rn{font-weight:700;color:var(--ocean)}
+.quick .pc{font-weight:700;color:var(--ocean)}
+.strike{text-decoration:line-through;color:var(--gray);font-weight:400;font-size:.85em}
+footer{background:var(--ocean);color:#fff;text-align:center;padding:2rem}
+footer .disc{max-width:800px;margin:0 auto .7rem;font-size:.74rem;opacity:.7;line-height:1.5}
+footer .gen{font-size:.72rem;opacity:.5}
+@media(max-width:768px){.hero h1{font-size:1.6rem}.hero .td{flex-direction:column;gap:.5rem}.photo-grid{grid-template-columns:1fr 1fr}.pricing{grid-template-columns:1fr}.card-top{flex-direction:column}}
 </style>
 </head>
 <body>
 
 <div class="hero">
-  <div class="hero-content">
+  <div class="hero-c">
     <h1>🌴 Mexico Family Resorts — Christmas 2026</h1>
-    <p class="subtitle">All-Inclusive · Live Pricing · Verified Availability</p>
-    <div class="trip-details">
-      <div><div class="label">Family A</div><div class="value">2 adults + 10, 13, 16</div></div>
-      <div><div class="label">Family B</div><div class="value">2 adults + 3, 7, 10</div></div>
-      <div><div class="label">Dates Checked</div><div class="value">Dec 20–27 &amp; Dec 22–29</div></div>
-      <div><div class="label">Verified</div><div class="value">July 25, 2026</div></div>
+    <p class="sub">All-Inclusive · Live Pricing · Verified Photos &amp; Room Specs</p>
+    <div class="td">
+      <div><div class="l">Family A</div><div class="v">2 adults + 10, 13, 16</div></div>
+      <div><div class="l">Family B</div><div class="v">2 adults + 3, 7, 10</div></div>
+      <div><div class="l">Primary Dates</div><div class="v">Dec 22–29, 2026</div></div>
+      <div><div class="l">Budget</div><div class="v">Under $10K/family</div></div>
     </div>
   </div>
 </div>
 
-<div class="alert-bar">
-  ⚠️ Key finding: <strong>Dec 22–29 has much better availability</strong> than Dec 20–27. Most resorts below are sold out for Dec 20–27 but have rooms for Dec 22–29.
+<div class="alert">
+  ⚠️ <strong>Dec 20–27 is mostly sold out.</strong> All pricing below is for <strong>Dec 22–29, 2026</strong> where inventory exists. Verified live on Booking.com July 25, 2026.
 </div>
 
-<!-- QUICK COMPARISON -->
-<div class="compare-section">
-  <h2 class="section-title">Quick Comparison — Live Prices</h2>
-  <p class="section-subtitle">Real quotes from Booking.com &amp; official sites · Captured July 25, 2026 · Dec 22–29 window</p>
-  <div class="compare-table-wrap">
-    <table class="compare-table">
+<!-- QUICK COMPARE -->
+<div class="section">
+  <h2 class="stitle">Quick Comparison</h2>
+  <p class="ssub">Live Booking.com prices for Dec 22–29 · Per family of 5 · All-inclusive incl. taxes</p>
+  <div class="quick-wrap">
+    <table class="quick">
       <thead>
         <tr>
           <th>Resort</th>
-          <th>★ Rating</th>
+          <th>TA</th>
           <th>From CUN</th>
+          <th>Room for 5?</th>
           <th>Family A (10,13,16)</th>
           <th>Family B (3,7,10)</th>
-          <th>Both Families</th>
+          <th>Both</th>
           <th>Dec 20–27</th>
-          <th>Source</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td class="resort-name">Ocean Riviera Paradise <span class="badge badge-value">Cheapest</span></td>
-          <td>4.0 · <span class="stars">★★★★</span></td>
-          <td>50 min</td>
-          <td class="price-cell">$7,234 <span class="strike">$7,863</span></td>
-          <td class="price-cell">~$5,500 est.</td>
-          <td class="price-cell">~$12,700</td>
-          <td><span class="avail-no">❌ Sold out</span></td>
-          <td>Booking.com</td>
-        </tr>
-        <tr>
-          <td class="resort-name">Dreams Riviera Cancun <span class="badge badge-best">Best Quality</span></td>
-          <td>4.4 · <span class="stars">★★★★½</span></td>
-          <td>25 min</td>
-          <td class="price-cell">$8,443 <span class="strike">$12,588</span></td>
-          <td class="price-cell">$7,433 <span class="strike">$10,162</span></td>
-          <td class="price-cell">$15,876</td>
-          <td><span class="avail-no">❌ Sold out</span></td>
-          <td>Booking.com</td>
-        </tr>
-        <tr>
-          <td class="resort-name">Riu Palace Costa Mujeres <span class="badge badge-top">Best Value</span></td>
-          <td>4.5 · <span class="stars">★★★★½</span></td>
-          <td>35 min</td>
-          <td class="price-cell">$8,096 <span class="strike">$10,077</span></td>
-          <td class="price-cell">$8,006 <span class="strike">$9,987</span></td>
-          <td class="price-cell">$16,102</td>
-          <td><span class="avail-no">❌ Sold out</span></td>
-          <td>Booking.com</td>
-        </tr>
-        <tr>
-          <td class="resort-name">Barceló Maya Palace</td>
-          <td>4.5 · <span class="stars">★★★★½</span></td>
+          <td class="rn">Barceló Maya Palace <span class="badge b-top">✅ Fits 5 in 1 room</span></td>
+          <td>4.5</td>
           <td>55 min</td>
-          <td class="price-cell">$10,228</td>
-          <td class="price-cell">$7,958</td>
-          <td class="price-cell">$18,186</td>
-          <td><span class="avail-no">❌ Sold out</span></td>
-          <td>Booking.com</td>
+          <td><strong>Yes</strong> — Family Jr Suite, 1,011 sqft</td>
+          <td class="pc">$10,228</td>
+          <td class="pc">$7,958</td>
+          <td class="pc">$18,186</td>
+          <td><span style="color:var(--red);font-weight:700">❌ Sold out</span></td>
         </tr>
         <tr>
-          <td class="resort-name">Iberostar Paraíso Lindo</td>
-          <td>4.5 · <span class="stars">★★★★½</span></td>
-          <td>30 min</td>
-          <td class="price-cell">$13,812</td>
-          <td class="price-cell">$13,812</td>
-          <td class="price-cell">$27,624</td>
-          <td><span class="avail-yes">✅ Available</span></td>
-          <td>Iberostar.com</td>
+          <td class="rn">Dreams Riviera Cancun <span class="badge b-best">Best beach</span></td>
+          <td>4.4</td>
+          <td>25 min</td>
+          <td>Connecting only — 2× 452 sqft</td>
+          <td class="pc">$8,443 <span class="strike">$12,588</span></td>
+          <td class="pc">$7,433 <span class="strike">$10,162</span></td>
+          <td class="pc">$15,876</td>
+          <td><span style="color:var(--red);font-weight:700">❌ Sold out</span></td>
+        </tr>
+        <tr>
+          <td class="rn">Riu Palace Costa Mujeres <span class="badge b-val">Same beach as GB</span></td>
+          <td>4.5</td>
+          <td>35 min</td>
+          <td><strong>No</strong> — max 4, need 2 rooms</td>
+          <td class="pc">$8,096 <span class="strike">$10,077</span></td>
+          <td class="pc">$8,006 <span class="strike">$9,987</span></td>
+          <td class="pc">$16,102</td>
+          <td><span style="color:var(--red);font-weight:700">❌ Sold out</span></td>
+        </tr>
+        <tr>
+          <td class="rn">Ocean Riviera Paradise <span class="badge b-val">Cheapest</span></td>
+          <td>4.0</td>
+          <td>50 min</td>
+          <td><strong>No</strong> — max 4, need 2 rooms</td>
+          <td class="pc">$7,234</td>
+          <td class="pc">~$5,500 est.</td>
+          <td class="pc">~$12,700</td>
+          <td><span style="color:var(--red);font-weight:700">❌ Sold out</span></td>
         </tr>
       </tbody>
     </table>
   </div>
-  <div class="note-box">
-    💡 <strong>Family A note:</strong> Most booking engines treat the 16-year-old as an adult, so Family A searches as 3 adults + 1 child (10) + 1 child (13). This means Family A typically needs a larger room or two rooms. Family B (ages 3, 7, 10) fits standard child pricing more easily.
+  <div class="note">
+    💡 <strong>Only Barceló Maya Palace has a verified single room that sleeps 5</strong> (Family Junior Suite, 1,011 sqft). The other three resorts cap at 4 per room — your family of 5 will need two rooms. This is already reflected in the prices above (which include 2-room configurations where needed).
   </div>
 </div>
 
 <!-- DETAILED CARDS -->
-<div class="resorts-section">
-  <h2 class="section-title">Detailed Resort Profiles</h2>
+<div class="section" style="padding-top:0">
+  <h2 class="stitle">Detailed Resort Profiles</h2>
 
-  <!-- OCEAN RIVIERA PARADISE -->
-  <div class="resort-card">
-    <div class="resort-top">
+  <!-- 1. BARCELÓ -->
+  <div class="card">
+    <div class="card-top">
       <div>
-        <h2>💵 Ocean Riviera Paradise — Cheapest Option</h2>
-        <div class="loc">📍 Playa del Carmen · 50 min / 34 mi from CUN</div>
-      </div>
-      <div class="rating-box">
-        <div class="score">4.0</div>
-        <div class="score-label">TA · Mid-pack Riviera Maya</div>
-      </div>
-    </div>
-    <div class="resort-body">
-      <div class="winner">✅ Lowest verified price — $7,234 for Family A (Dec 22–29)</div>
-      <p class="resort-desc">Large, lively resort with a children's waterpark, bowling alley, theater with daily shows, and multiple pools. Food and service can be inconsistent, but the value is hard to beat for families who prioritize pool time over fine dining.</p>
-      <div class="amenities">
-        <span class="amenity">💦 Children's Waterpark</span><span class="amenity">🎳 Bowling Alley</span><span class="amenity">🌺 Daisy Club Kids Program</span><span class="amenity">🏊 Multiple Pools</span><span class="amenity">🎭 Theater &amp; Shows</span><span class="amenity">🍽️ 10 Restaurants</span><span class="amenity">🏖️ Beachfront</span><span class="amenity">🏓 Sports Courts</span>
-      </div>
-      <div class="price-row">
-        <div class="price-box"><div class="label">Family A (10,13,16) · Dec 22–29</div><div class="amount">$7,234</div><div class="deal">↓ $629 off (was $7,863)</div><div class="sub">2× Junior Suite Waterpark Side, AI</div></div>
-        <div class="price-box unavail"><div class="label">Family B (3,7,10)</div><div class="amount">Not yet quoted</div><div class="sub">Likely ~$5,500 based on resort pricing</div></div>
-        <div class="price-box both"><div class="label">Both Families (est.)</div><div class="amount">~$12,700</div><div class="sub">Best total value on the list</div></div>
-      </div>
-      <div class="info-line"><strong>Dec 20–27:</strong> <span class="avail-tag red">❌ Sold out on Booking.com</span></div>
-      <div class="info-line"><strong>Dec 22–29:</strong> <span class="avail-tag green">✅ Available — 2× Junior Suite Waterpark Side</span></div>
-      <div class="info-line"><strong>Christmas gala fee:</strong> None disclosed (may appear at checkout)</div>
-      <div class="cta-bar">
-        <a href="https://www.booking.com/searchresults.html?ss=Ocean+Riviera+Paradise+All+Inclusive&checkin=2026-12-22&checkout=2026-12-29" target="_blank" class="cta-btn">🔗 Book on Booking.com</a>
-        <a href="https://www.h10hotels.com/en/riviera-maya-hotels/ocean-riviera-paradise" target="_blank" class="cta-btn secondary">🏨 Resort Website</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- DREAMS RIVIERA CANCUN -->
-  <div class="resort-card">
-    <div class="resort-top">
-      <div>
-        <h2>⭐ Dreams Riviera Cancun — Best Quality Pick</h2>
-        <div class="loc">📍 Puerto Morelos · 25 min / 16 mi from CUN</div>
-      </div>
-      <div class="rating-box">
-        <div class="score">4.4</div>
-        <div class="score-label">TA · #14 of 44 Puerto Morelos</div>
-      </div>
-    </div>
-    <div class="resort-body">
-      <div class="winner">✅ 33% off on Booking.com — $8,443 for Family A (was $12,588)</div>
-      <p class="resort-desc">Compact, attractive beachfront resort with one of the best beaches in the area. Strong Explorer's Club for kids 3–12, Core Zone teens club, and enough dining variety for a week. Smaller footprint means less walking with kids — parents love the layout.</p>
-      <div class="amenities">
-        <span class="amenity">🔍 Explorer's Club (3–12)</span><span class="amenity">🎯 Core Zone Teens</span><span class="amenity">🏊 Main &amp; Children's Pools</span><span class="amenity">🏖️ Excellent Beach</span><span class="amenity">🎭 Nightly Entertainment</span><span class="amenity">🍽️ 7 Restaurants</span><span class="amenity">🛎️ 24hr Room Service</span><span class="amenity">🧖 Spa</span>
-      </div>
-      <div class="price-row">
-        <div class="price-box"><div class="label">Family A (10,13,16) · Dec 22–29</div><div class="amount">$8,443</div><div class="deal">↓ 33% off (was $12,588)</div><div class="sub">2× Premium Deluxe w/ Whirlpool, AI</div></div>
-        <div class="price-box"><div class="label">Family B (3,7,10) · Dec 22–29</div><div class="amount">$7,433</div><div class="deal">↓ 27% off (was $10,162)</div><div class="sub">King + Double Premium Deluxe, AI</div></div>
-        <div class="price-box both"><div class="label">Both Families</div><div class="amount">$15,876</div><div class="sub">Total for 10 guests</div></div>
-      </div>
-      <div class="info-line"><strong>Dec 20–27:</strong> <span class="avail-tag red">❌ Sold out on Booking.com</span></div>
-      <div class="info-line"><strong>Dec 22–29:</strong> <span class="avail-tag green">✅ Available — free cancellation, pay at property</span></div>
-      <div class="info-line"><strong>Christmas gala fee:</strong> None disclosed</div>
-      <div class="cta-bar">
-        <a href="https://www.booking.com/searchresults.html?ss=Dreams+Riviera+Cancun+Resort+Spa&checkin=2026-12-22&checkout=2026-12-29" target="_blank" class="cta-btn">🔗 Book on Booking.com</a>
-        <a href="https://www.hyattinclusivecollection.com/en/resorts-hotels/dreams/mexico/riviera-cancun-resort-spa/" target="_blank" class="cta-btn secondary">🏨 Resort Website</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- RIU PALACE COSTA MUJERES -->
-  <div class="resort-card">
-    <div class="resort-top">
-      <div>
-        <h2>💎 Riu Palace Costa Mujeres — Best Value Pick</h2>
-        <div class="loc">📍 Costa Mujeres · 35 min / 22 mi from CUN · Same beach as Garza Blanca</div>
-      </div>
-      <div class="rating-box">
-        <div class="score">4.5</div>
-        <div class="score-label">TA · Top Costa Mujeres</div>
-      </div>
-    </div>
-    <div class="resort-body">
-      <div class="winner">✅ On the same beach as Garza Blanca at roughly 1/3 the price — 20% off on Booking.com</div>
-      <p class="resort-desc">High-quality Riu Palace on the quiet Costa Mujeres beach — the same stretch you've enjoyed at Garza Blanca. Beautiful infinity pools, RiuLand kids program, excellent Riu-level consistency. Both families cost about the same, which is unusual and makes splitting costs easy.</p>
-      <div class="amenities">
-        <span class="amenity">🏊 Stunning Infinity Pools</span><span class="amenity">👶 RiuLand Kids Program</span><span class="amenity">🏖️ Quiet Costa Mujeres Beach</span><span class="amenity">🍽️ 6 Restaurants</span><span class="amenity">🍸 24hr All-Inclusive</span><span class="amenity">🎭 Evening Entertainment</span><span class="amenity">🧖 Renova Spa</span>
-      </div>
-      <div class="price-row">
-        <div class="price-box"><div class="label">Family A (10,13,16) · Dec 22–29</div><div class="amount">$8,096</div><div class="deal">↓ 20% off (was $10,077)</div><div class="sub">2× Junior Suite Garden View, AI</div></div>
-        <div class="price-box"><div class="label">Family B (3,7,10) · Dec 22–29</div><div class="amount">$8,006</div><div class="deal">↓ 20% off (was $9,987)</div><div class="sub">2× Junior Suite Garden View, AI</div></div>
-        <div class="price-box both"><div class="label">Both Families</div><div class="amount">$16,102</div><div class="sub">Total for 10 guests</div></div>
-      </div>
-      <div class="info-line"><strong>Dec 20–27:</strong> <span class="avail-tag red">❌ Sold out on Booking.com</span></div>
-      <div class="info-line"><strong>Dec 22–29:</strong> <span class="avail-tag green">✅ Available — free cancellation, pay at property</span></div>
-      <div class="info-line"><strong>Christmas gala fee:</strong> None disclosed</div>
-      <div class="cta-bar">
-        <a href="https://www.booking.com/searchresults.html?ss=Riu+Palace+Costa+Mujeres&checkin=2026-12-22&checkout=2026-12-29" target="_blank" class="cta-btn">🔗 Book on Booking.com</a>
-        <a href="https://www.riu.com/en/hotel/mexico/costa-mujeres/hotel-riu-palace-costa-mujeres/" target="_blank" class="cta-btn secondary">🏨 Resort Website</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- BARCELÓ MAYA PALACE -->
-  <div class="resort-card">
-    <div class="resort-top">
-      <div>
-        <h2>🏊 Barceló Maya Palace</h2>
+        <h2>Barceló Maya Palace <span class="badge b-top">✅ Only resort with a true 5-person room</span></h2>
         <div class="loc">📍 Puerto Aventuras · 55 min / 40 mi from CUN</div>
       </div>
-      <div class="rating-box">
-        <div class="score">4.5</div>
-        <div class="score-label">TA · Top Puerto Aventuras</div>
+      <div class="rb">
+        <div class="sc">4.5</div>
+        <div class="sl">TA · Top Puerto Aventuras</div>
       </div>
     </div>
-    <div class="resort-body">
-      <p class="resort-desc">Premium section of the enormous Barceló Maya complex. Kids get a dedicated waterpark, bowling alley, arcade, mini golf, and Barcy Kids Club — while parents get access to 15+ restaurants complex-wide. Best for active families who want a big campus with tons to do.</p>
+    <div class="photo-grid">
+      <div class="photo-item">
+        <img src="https://storage.googleapis.com/cloudaio/images/hotel/64c6d549-8e39-4907-b7ae-6643605cbfc9/7724/BMAYAP_POOL_85_low.jpg" alt="Pool">
+        <div class="pcap">Pool</div>
+      </div>
+      <div class="photo-item">
+        <img src="https://www.mayapalaceresort.com/images/rooms/family_junior_suite.jpg" alt="Family Junior Suite">
+        <div class="pcap">Family Junior Suite</div>
+      </div>
+      <div class="photo-item">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/6c/a2/64/barcelo-maya-palace-deluxe.jpg?w=700&h=-1&s=1" alt="Beach">
+        <div class="pcap">Beach</div>
+      </div>
+      <div class="photo-item">
+        <img src="https://cdn.images.stsvacations.com/inventory/Mexico_-_Riviera_Maya/Barcelo_Maya_Palace_Deluxe/medium_278-children-installations-9-hotel-barcelo-maya-palace-deluxe54-160499.jpg" alt="Kids water park">
+        <div class="pcap">Kids Water Park</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="winner">✅ Only resort on this list with a verified single room that sleeps 5 — Family Junior Suite at 1,011 sqft</div>
+      <p class="desc">Premium section of the enormous Barceló Maya complex. Kids get a dedicated waterpark, bowling alley, arcade, mini golf, and Barcy Kids Club. 15+ restaurants across the complex. Best for active families who want a big campus with tons to do.</p>
+
+      <div class="room-box">
+        <h3>Proposed Room — Verified from mayapalaceresort.com</h3>
+        <div class="rn">Family Junior Suite <span class="sqft">1,011 sqft / 94 m²</span></div>
+        <div class="rs">
+          <strong>Layout:</strong> Main living room + separate bedroom<br>
+          <strong>Beds:</strong> King or two doubles (main) + two singles (bedroom) + sofa bed<br>
+          <strong>Max occupancy:</strong> 5 (2 adults + 3 kids, or 3 adults + 2 kids)<br>
+          <strong>Verifies as:</strong> Single bookable room — no connecting room gamble<br>
+          <a href="https://www.mayapalaceresort.com/family_junior_suite.asp" target="_blank" style="color:var(--turquoise);font-size:.82rem">→ View room details on official site</a>
+        </div>
+      </div>
+
       <div class="amenities">
-        <span class="amenity">💦 Children's Waterpark</span><span class="amenity">🎳 Bowling &amp; Arcade</span><span class="amenity">🥳 Barcy Kids Club</span><span class="amenity">⛳ Mini Golf</span><span class="amenity">🏊 Multiple Pools</span><span class="amenity">🍽️ 15+ Restaurants</span><span class="amenity">🏖️ Excellent Beach</span><span class="amenity">🎭 Theater Shows</span>
+        <span class="am">💦 Children's Waterpark</span><span class="am">🎳 Bowling &amp; Arcade</span><span class="am">🥳 Barcy Kids Club</span><span class="am">⛳ Mini Golf</span><span class="am">🏊 3 Pools</span><span class="am">🍽️ 15+ Restaurants (complex)</span><span class="am">🏖️ Beachfront</span><span class="am">🎭 Theater Shows</span>
       </div>
-      <div class="price-row">
-        <div class="price-box"><div class="label">Family A (10,13,16) · Dec 22–29</div><div class="amount">$10,228</div><div class="sub">2× Junior Suite, AI · free cancellation</div></div>
-        <div class="price-box"><div class="label">Family B (3,7,10) · Dec 22–29</div><div class="amount">$7,958</div><div class="sub">1× Junior Suite (2ad+3ch), AI</div></div>
-        <div class="price-box both"><div class="label">Both Families</div><div class="amount">$18,186</div><div class="sub">Total for 10 guests</div></div>
+
+      <div class="pricing">
+        <div class="pbox pd"><div class="pl">Family A · Dec 22–29</div><div class="pa">$10,228</div><div class="ps">2× Junior Suite AI · free cancellation</div></div>
+        <div class="pbox pd"><div class="pl">Family B · Dec 22–29</div><div class="pa">$7,958</div><div class="ps">1× Family Jr Suite AI · 2ad+3ch</div></div>
+        <div class="pbox pg"><div class="pl">Both Families</div><div class="pa">$18,186</div><div class="ps">Total for 10 guests</div></div>
       </div>
-      <div class="info-line"><strong>Dec 20–27:</strong> <span class="avail-tag red">❌ Sold out on Booking.com</span></div>
-      <div class="info-line"><strong>Dec 22–29:</strong> <span class="avail-tag green">✅ Available — free cancellation, pay at property</span></div>
-      <div class="info-line"><strong>Christmas gala fee:</strong> None disclosed</div>
-      <div class="cta-bar">
-        <a href="https://www.booking.com/searchresults.html?ss=Barcelo+Maya+Palace&checkin=2026-12-22&checkout=2026-12-29" target="_blank" class="cta-btn">🔗 Book on Booking.com</a>
-        <a href="https://www.barcelo.com/en-us/barcelo-maya-palace/" target="_blank" class="cta-btn secondary">🏨 Resort Website</a>
+
+      <div class="info-row"><strong>Dec 20–27:</strong> <span class="atag r">❌ Sold out on Booking.com</span></div>
+      <div class="info-row"><strong>Dec 22–29:</strong> <span class="atag g">✅ Available — free cancellation, pay at property</span></div>
+
+      <div class="cta">
+        <a href="https://www.barcelo.com/en-us/barcelo-maya-palace/" target="_blank" class="cbtn p">🔗 Book Direct (Barceló)</a>
+        <a href="https://www.booking.com/hotel/mx/barcelo-maya-palace-all-inclusive.html" target="_blank" class="cbtn s">📋 Booking.com</a>
+        <a href="https://www.tripadvisor.com/Hotel_Review-g27717290-d673129-Reviews-Barcelo_Maya_Palace-Barcelo_Maya_Solidaridad_Yucatan_Peninsula.html" target="_blank" class="cbtn s">📖 TripAdvisor</a>
+        <a href="https://www.mayapalaceresort.com/family_junior_suite.asp" target="_blank" class="cbtn s">🛏️ Room Details</a>
       </div>
     </div>
   </div>
 
-  <!-- IBEROSTAR PARAÍSO LINDO -->
-  <div class="resort-card">
-    <div class="resort-top">
+  <!-- 2. DREAMS RIVIERA CANCUN -->
+  <div class="card">
+    <div class="card-top">
       <div>
-        <h2>🏆 Iberostar Selection Paraíso Lindo</h2>
-        <div class="loc">📍 Playa Paraíso · 30 min / 20 mi from CUN</div>
+        <h2>Dreams Riviera Cancun <span class="badge b-best">Best beach + 33% off</span></h2>
+        <div class="loc">📍 Puerto Morelos · 25 min / 16 mi from CUN</div>
       </div>
-      <div class="rating-box">
-        <div class="score">4.5</div>
-        <div class="score-label">TA · Top 10 Playa Paraíso</div>
+      <div class="rb">
+        <div class="sc">4.4</div>
+        <div class="sl">TA · #14 of 44 Puerto Morelos</div>
       </div>
     </div>
-    <div class="resort-body">
-      <div class="winner">✅ Only resort confirmed available for BOTH date windows — wave pool, lazy river, splash park</div>
-      <p class="resort-desc">The strongest family-amenity-to-value resort on the list. Wave pool, lazy river, splash park, Star Camp kids program, multiple pools, evening shows. Two-Bedroom Family rooms sleep up to 6. The only resort that confirmed availability for Dec 20–27 AND Dec 22–29 — but at a premium price.</p>
+    <div class="photo-grid">
+      <div class="photo-item">
+        <img src="https://storage.googleapis.com/cloudaio/images/hotel/34918d7b-56b6-4727-af19-69854a0d4874/37243/DRERC_AERIAL2_1.jpg" alt="Aerial view">
+        <div class="pcap">Aerial</div>
+      </div>
+      <div class="photo-item">
+        <img src="https://alg.widen.net/content/pjsj1xxsll/webp/DRERC-DLX-OV-DBL-1A-CB.webp?u=itfpsm&download=true&q=80" alt="Premium Deluxe room">
+        <div class="pcap">Premium Deluxe Room</div>
+      </div>
+      <div class="photo-item">
+        <img src="https://resortpass.com/cdn-cgi/image/dpr=1,fit=cover,format=auto,quality=65,width=960/https://s3.us-west-2.amazonaws.com/assets.resortpass.com/uploads/image/picture/27672/dreamscancun_beachdaybed.jpg" alt="Beach">
+        <div class="pcap">Beach</div>
+      </div>
+      <div class="photo-item">
+        <img src="https://media-cdn.tripadvisor.com/media/photo-s/0f/4b/b8/20/kids-club--v16073349.jpg" alt="Explorer's Club">
+        <div class="pcap">Explorer's Kids Club</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="winner">✅ 33% off on Booking.com — compact beachfront resort, best beach on this list</div>
+      <p class="desc">Compact, attractive beachfront resort with one of the best beaches in the area. Smaller footprint means less walking with the 3-year-old. Explorer's Club for kids 3–12, nightly entertainment, enough dining variety for a week.</p>
+
+      <div class="room-box">
+        <h3>Proposed Room — Verified from hyattinclusivecollection.com</h3>
+        <div class="rn">Connecting Premium Deluxe (2 rooms) <span class="sqft">904 sqft total</span></div>
+        <div class="rs">
+          <strong>Layout:</strong> Two connecting Premium Deluxe rooms (452 sqft each)<br>
+          <strong>Beds:</strong> Room 1: 1 King · Room 2: 2 Doubles<br>
+          <strong>Max occupancy:</strong> Up to 8 across both rooms<br>
+          <strong>⚠️ Note:</strong> Must confirm connecting availability in writing — not guaranteed<br>
+          <a href="https://www.hyattinclusivecollection.com/en/resorts-hotels/dreams/mexico/riviera-cancun-resort-spa/accommodations/rooms-suites/" target="_blank" style="color:var(--turquoise);font-size:.82rem">→ View all room categories</a>
+        </div>
+      </div>
+
       <div class="amenities">
-        <span class="amenity">🌊 Wave Pool</span><span class="amenity">🛶 Lazy River</span><span class="amenity">💦 Splash Park &amp; Waterslides</span><span class="amenity">⭐ Star Camp Kids Program</span><span class="amenity">🏊 Multiple Pools</span><span class="amenity">🏖️ Beachfront</span><span class="amenity">🎭 Evening Shows</span><span class="amenity">🍽️ 7+ Restaurants</span>
+        <span class="am">🔍 Explorer's Club (3–12)</span><span class="am">🎯 Core Zone Teens</span><span class="am">🏊 Main &amp; Children's Pools</span><span class="am">🏖️ Excellent Beach</span><span class="am">🎭 Nightly Entertainment</span><span class="am">🍽️ 7 Restaurants</span><span class="am">🛎️ 24hr Room Service</span><span class="am">🧖 Spa</span>
       </div>
-      <div class="price-row">
-        <div class="price-box"><div class="label">Family A · Dec 20–27</div><div class="amount">$13,812</div><div class="sub">Two-Bedroom Family, AI · prepaid</div></div>
-        <div class="price-box"><div class="label">Family A · Dec 22–29</div><div class="amount">$15,400</div><div class="sub">Two-Bedroom Family, AI · prepaid</div></div>
-        <div class="price-box both"><div class="label">Both Families · Dec 20–27</div><div class="amount">$27,624</div><div class="sub">Above $10K/family budget</div></div>
+
+      <div class="pricing">
+        <div class="pbox pd"><div class="pl">Family A · Dec 22–29</div><div class="pa">$8,443</div><div class="ps"><span class="strike">$12,588</span> · 33% off · 2× Premium Deluxe AI</div></div>
+        <div class="pbox pd"><div class="pl">Family B · Dec 22–29</div><div class="pa">$7,433</div><div class="ps"><span class="strike">$10,162</span> · 27% off · King + Double AI</div></div>
+        <div class="pbox pg"><div class="pl">Both Families</div><div class="pa">$15,876</div><div class="ps">Total for 10 guests</div></div>
       </div>
-      <div class="info-line"><strong>Dec 20–27:</strong> <span class="avail-tag green">✅ Available (official site)</span> — $13,812 prepaid / $15,347 flexible</div>
-      <div class="info-line"><strong>Dec 22–29:</strong> <span class="avail-tag green">✅ Available (official site)</span> — $15,400 prepaid / $17,111 flexible</div>
-      <div class="info-line"><strong>Christmas gala fee:</strong> Not disclosed on official site</div>
-      <div class="info-line"><strong>⚠️ Over budget:</strong> At ~$13.8K/family, this is above the $10K target. Listed because it's the only resort with confirmed Dec 20–27 availability.</div>
-      <div class="cta-bar">
-        <a href="https://booking.iberostar.com/Reservations/Availability" target="_blank" class="cta-btn">🔗 Book on Iberostar.com</a>
-        <a href="https://www.iberostar.com/en/hotels/riviera-maya/iberostar-selection-paraiso-lindo/" target="_blank" class="cta-btn secondary">🏨 Resort Website</a>
+
+      <div class="info-row"><strong>Dec 20–27:</strong> <span class="atag r">❌ Sold out on Booking.com</span></div>
+      <div class="info-row"><strong>Dec 22–29:</strong> <span class="atag g">✅ Available — free cancellation, pay at property</span></div>
+
+      <div class="cta">
+        <a href="https://www.hyattinclusivecollection.com/en/resorts-hotels/dreams/mexico/riviera-cancun-resort-spa/" target="_blank" class="cbtn p">🔗 Resort Website</a>
+        <a href="https://www.hyatt.com/shop/rooms/drerc" target="_blank" class="cbtn s">🏨 Book on Hyatt.com</a>
+        <a href="https://www.booking.com/hotel/mx/dreams-riviera-cancun-resort-spa.html" target="_blank" class="cbtn s">📋 Booking.com</a>
+        <a href="https://www.tripadvisor.com/Hotel_Review-g240327-d1550490-Reviews-Dreams_Riviera_Cancun_Resort_Spa-Puerto_Morelos_Yucatan_Peninsula.html" target="_blank" class="cbtn s">📖 TripAdvisor</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. RIU PALACE COSTA MUJERES -->
+  <div class="card">
+    <div class="card-top">
+      <div>
+        <h2>Riu Palace Costa Mujeres <span class="badge b-val">Same beach as Garza Blanca</span></h2>
+        <div class="loc">📍 Costa Mujeres · 35 min / 22 mi from CUN</div>
+      </div>
+      <div class="rb">
+        <div class="sc">4.5</div>
+        <div class="sl">TA · Top Costa Mujeres</div>
+      </div>
+    </div>
+    <div class="photo-grid">
+      <div class="photo-item">
+        <img src="https://www.riu.com/dam/Ficha-Hotel/Hotel-Riu-Palace-Costa-Mujeres/Piscinas/pool-hotel-riu-palace-costa-mujeres.jpg" alt="Pool">
+        <div class="pcap">Infinity Pool</div>
+      </div>
+      <div class="photo-item">
+        <img src="https://www.riu.com/dam/Ficha-Hotel/Hotel-Riu-Palace-Costa-Mujeres/Habitaciones/room-hotel-riu-palace-costa-mujeres-SJFE.jpg" alt="Junior Suite">
+        <div class="pcap">Junior Suite</div>
+      </div>
+      <div class="photo-item">
+        <img src="https://www.riu.com/dam/Ficha-Hotel/Hotel-Riu-Palace-Costa-Mujeres/Playa/beach-hotel-riu-palace-costa-mujeres.jpg" alt="Beach">
+        <div class="pcap">Costa Mujeres Beach</div>
+      </div>
+      <div class="photo-item">
+        <img src="https://www.riu.com/dam/Ficha-Hotel/Hotel-Riu-Palace-Costa-Mujeres/Entretenimiento/splash-water-world-hotel-riu-palace-costa-mujeres-2.jpg" alt="Splash Water World">
+        <div class="pcap">Splash Water World</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="winner">✅ On the same Costa Mujeres beach as Garza Blanca — you know and love this coastline — at roughly 1/3 the price</div>
+      <p class="desc">High-quality Riu Palace on the quiet Costa Mujeres beach. Beautiful infinity pools, RiuLand kids program, 5 swimming pools, Splash Water World water park steps away. 20% off on Booking.com. Both families cost nearly the same — easy to split.</p>
+
+      <div class="room-box">
+        <h3>Proposed Room — Verified from riu.com</h3>
+        <div class="rn">2× Junior Suite Garden View <span class="sqft">431 sqft each / 40 m²</span></div>
+        <div class="rs">
+          <strong>Layout:</strong> Two separate Junior Suites (no verified connecting category)<br>
+          <strong>Beds:</strong> One king or two small doubles + sofa/sitting area<br>
+          <strong>Max occupancy:</strong> 4 per room (family of 5 needs 2 rooms)<br>
+          <strong>⚠️ Note:</strong> No verified connecting rooms — request but don't guarantee<br>
+          <a href="https://www.riu.com/en/hotel/mexico/cancun/hotel-riu-palace-costa-mujeres" target="_blank" style="color:var(--turquoise);font-size:.82rem">→ View rooms on official site</a>
+        </div>
+      </div>
+
+      <div class="amenities">
+        <span class="am">🏊 5 Swimming Pools</span><span class="am">👶 RiuLand Kids Program</span><span class="am">💦 Splash Water World</span><span class="am">🏖️ Costa Mujeres Beach</span><span class="am">🍽️ Buffet &amp; Themed Restaurants</span><span class="am">🍸 6 Bars</span><span class="am">🧖 Renova Spa</span><span class="am">🎭 Evening Entertainment</span>
+      </div>
+
+      <div class="pricing">
+        <div class="pbox pd"><div class="pl">Family A · Dec 22–29</div><div class="pa">$8,096</div><div class="ps"><span class="strike">$10,077</span> · 20% off · 2× Jr Suite AI</div></div>
+        <div class="pbox pd"><div class="pl">Family B · Dec 22–29</div><div class="pa">$8,006</div><div class="ps"><span class="strike">$9,987</span> · 20% off · 2× Jr Suite AI</div></div>
+        <div class="pbox pg"><div class="pl">Both Families</div><div class="pa">$16,102</div><div class="ps">Total for 10 guests</div></div>
+      </div>
+
+      <div class="info-row"><strong>Dec 20–27:</strong> <span class="atag r">❌ Sold out on Booking.com</span></div>
+      <div class="info-row"><strong>Dec 22–29:</strong> <span class="atag g">✅ Available — free cancellation, pay at property</span></div>
+
+      <div class="cta">
+        <a href="https://www.riu.com/en/hotel/mexico/cancun/hotel-riu-palace-costa-mujeres" target="_blank" class="cbtn p">🔗 Book Direct (RIU)</a>
+        <a href="https://www.booking.com/hotel/mx/riu-palace-costa-mujeres-all-inclusive.html" target="_blank" class="cbtn s">📋 Booking.com</a>
+        <a href="https://www.tripadvisor.com/Hotel_Review-g1229340-d14216187-Reviews-Hotel_Riu_Palace_Costa_Mujeres-Playa_Mujeres_Costa_Mujeres_Yucatan_Peninsula.html" target="_blank" class="cbtn s">📖 TripAdvisor</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. OCEAN RIVIERA PARADISE -->
+  <div class="card">
+    <div class="card-top">
+      <div>
+        <h2>Ocean Riviera Paradise <span class="badge b-val">Cheapest option</span></h2>
+        <div class="loc">📍 Playa del Carmen · 50 min / 34 mi from CUN</div>
+      </div>
+      <div class="rb">
+        <div class="sc">4.0</div>
+        <div class="sl">TA · Mid-pack Riviera Maya</div>
+      </div>
+    </div>
+    <div class="photo-grid">
+      <div class="photo-item">
+        <img src="https://www.h10hotels.com/media/h10-hotels/images/h10-ocean-riviera-paradise/h10-ocean-riviera-paradise-piscina-principal.jpg" alt="Main pool">
+        <div class="pcap">Main Pool</div>
+      </div>
+      <div class="photo-item">
+        <img src="https://www.h10hotels.com/media/h10-hotels/images/h10-ocean-riviera-paradise/h10-ocean-riviera-paradise-restaurante.jpg" alt="Restaurant">
+        <div class="pcap">Restaurant</div>
+      </div>
+      <div class="photo-item">
+        <img src="https://www.h10hotels.com/img/h10-ocean-riviera-paradise-daisy-club.jpg" alt="Daisy Club">
+        <div class="pcap">Daisy Kids Club</div>
+      </div>
+      <div class="photo-item">
+        <img src="https://www.h10hotels.com/images/h10-ocean-riviera-paradise-pool.jpg" alt="Pool area">
+        <div class="pcap">Pool Area</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="winner">✅ Lowest price — $7,234 for Family A. Kids get bowling, waterpark, theater, and Daisy Club</div>
+      <p class="desc">Large, lively resort with a children's waterpark, bowling alley, theater with daily shows, and multiple pools. Food and service can be inconsistent, but the value is undeniable for families who prioritize pool time and activities over fine dining.</p>
+
+      <div class="room-box">
+        <h3>Proposed Room — Size from third-party sellers (official site doesn't publish sqft)</h3>
+        <div class="rn">2× Junior Suite Waterpark Side <span class="sqft">~614 sqft each / 57 m²</span></div>
+        <div class="rs">
+          <strong>Layout:</strong> Two separate Junior Suites<br>
+          <strong>Beds:</strong> One king or two doubles + sofa bed<br>
+          <strong>Max occupancy:</strong> 4 per room (family of 5 needs 2 rooms)<br>
+          <strong>⚠️ Note:</strong> Room dimensions not confirmed on official H10 site — reported by hotel sellers as ~57 m²<br>
+          <a href="https://www.h10hotels.com/en/riviera-maya-hotels/ocean-riviera-paradise" target="_blank" style="color:var(--turquoise);font-size:.82rem">→ View rooms on official site</a>
+        </div>
+      </div>
+
+      <div class="amenities">
+        <span class="am">💦 Children's Waterpark</span><span class="am">🎳 Bowling Alley</span><span class="am">🌺 Daisy Club Kids Program</span><span class="am">🏊 Multiple Pools</span><span class="am">🎭 Theater &amp; Daily Shows</span><span class="am">🍽️ 10 Restaurants</span><span class="am">🏖️ Beachfront</span><span class="am">🏓 Sports Courts</span>
+      </div>
+
+      <div class="pricing">
+        <div class="pbox pd"><div class="pl">Family A · Dec 22–29</div><div class="pa">$7,234</div><div class="ps">2× Junior Suite Waterpark Side AI</div></div>
+        <div class="pbox pd"><div class="pl">Family B · Dec 22–29</div><div class="pa">~$5,500</div><div class="ps">Estimated — not directly quoted</div></div>
+        <div class="pbox pg"><div class="pl">Both Families (est.)</div><div class="pa">~$12,700</div><div class="ps">Best total value</div></div>
+      </div>
+
+      <div class="info-row"><strong>Dec 20–27:</strong> <span class="atag r">❌ Sold out on Booking.com</span></div>
+      <div class="info-row"><strong>Dec 22–29:</strong> <span class="atag g">✅ Available on Booking.com</span></div>
+
+      <div class="cta">
+        <a href="https://www.h10hotels.com/en/riviera-maya-hotels/ocean-riviera-paradise" target="_blank" class="cbtn p">🔗 Book Direct (H10)</a>
+        <a href="https://www.booking.com/hotel/mx/ocean-riviera-paradise.html" target="_blank" class="cbtn s">📋 Booking.com</a>
+        <a href="https://www.tripadvisor.com/Hotel_Review-g150812-d10751905-Reviews-Ocean_Riviera_Paradise-Playa_del_Carmen_Yucatan_Peninsula.html" target="_blank" class="cbtn s">📖 TripAdvisor</a>
       </div>
     </div>
   </div>
@@ -352,22 +448,22 @@
 </div>
 
 <!-- SUMMARY -->
-<div class="compare-section" style="padding-bottom:3rem;">
-  <h2 class="section-title">My Recommendation</h2>
-  <div class="note-box" style="font-size:.92rem; line-height:1.7;">
-    <p style="margin-bottom:.8rem;"><strong>📅 Switch to Dec 22–29.</strong> Every resort except Iberostar is sold out for Dec 20–27. Dec 22–29 has real inventory at good prices.</p>
-    <p style="margin-bottom:.8rem;"><strong>🏆 Best overall: Dreams Riviera Cancun</strong> — $8,443 / $7,433 per family (33% off), great beach, compact layout, excellent kids clubs. Both families = $15,876 total.</p>
-    <p style="margin-bottom:.8rem;"><strong>💎 Best value: Riu Palace Costa Mujeres</strong> — same beach as Garza Blanca, 4.5★, $8K per family. Both families = $16,102. You know and love this coastline.</p>
-    <p style="margin-bottom:.8rem;"><strong>💵 Cheapest: Ocean Riviera Paradise</strong> — $7,234 for Family A, bowling alley, waterpark, tons of kids stuff. Lower quality but best price.</p>
-    <p><strong>🏊 Most stuff for kids: Barceló Maya Palace</strong> — waterpark, bowling, arcade, mini golf. $10,228 / $7,958. Biggest campus, most activities.</p>
+<div class="section" style="padding-top:0">
+  <h2 class="stitle">My Recommendation</h2>
+  <div class="note" style="font-size:.88rem;line-height:1.7;padding:1rem 1.3rem">
+    <p style="margin-bottom:.7rem"><strong>📅 Go Dec 22–29.</strong> Almost everything is sold out for Dec 20–27. Dec 22–29 has real inventory at discount prices.</p>
+    <p style="margin-bottom:.7rem"><strong>🏆 Best overall: Dreams Riviera Cancun</strong> — $8,443 / $7,433 per family (33% off). Best beach, compact layout (easy with the 3-year-old), great kids club. Both families = $15,876.</p>
+    <p style="margin-bottom:.7rem"><strong>🏠 Easiest room: Barceló Maya Palace</strong> — the only resort with a true 5-person room (1,011 sqft Family Junior Suite). No connecting room gamble. Most stuff for kids (waterpark, bowling, arcade). $10,228 / $7,958.</p>
+    <p style="margin-bottom:.7rem"><strong>💎 Same beach as Garza Blanca: Riu Palace Costa Mujeres</strong> — you know and love Costa Mujeres. 4.5★, 20% off, Splash Water World for kids. $8,096 / $8,006. But you'll need 2 rooms per family.</p>
+    <p><strong>💵 Cheapest: Ocean Riviera Paradise</strong> — $7,234 for Family A. Bowling, waterpark, theater. Lowest quality on the list but best price.</p>
   </div>
 </div>
 
 <footer>
-  <div class="disclaimer">
-    <strong>Pricing sources:</strong> Booking.com and official resort booking engines, captured July 25, 2026. Prices include taxes/fees with all-inclusive plan. Free cancellation and pay-at-property options noted where available. Family A is treated as 3 adults + child(ren) by most engines due to the 16-year-old. Prices subject to change and likely to increase as Christmas approaches. No Christmas gala dinner fees were disclosed by any booking engine — this does not rule out mandatory holiday surcharges appearing later in checkout. Airfare and airport transfers not included.
+  <div class="disc">
+    <strong>Sources:</strong> Booking.com live pricing captured July 25, 2026. Room specs from official resort websites (barcelo.com, hyattinclusivecollection.com, riu.com, h10hotels.com) and mayapalaceresort.com. All photos verified as working HTTP 200 on July 25, 2026 — sourced from official resort CDNs and TripAdvisor media. Family A priced as 3 adults + children (16yo counted as adult by most engines). Prices subject to change. No Christmas gala fees disclosed by any booking engine — does not rule out mandatory holiday surcharges. Airfare and transfers not included.
   </div>
-  <div class="generated">Generated July 25, 2026 · Live pricing verified on Booking.com &amp; official sites · Prices in USD</div>
+  <div class="gen">Generated July 25, 2026 · Verified photos &amp; links · Prices in USD</div>
 </footer>
 
 </body>
