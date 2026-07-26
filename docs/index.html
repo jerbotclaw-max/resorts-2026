@@ -8,80 +8,89 @@
 :root{--t:#0d9488;--tl:#14b8a6;--s:#f5f0e8;--sd:#e7dfd3;--o:#0c4a6e;--ol:#0369a1;--g:#d4a017;--d:#1e293b;--gr:#64748b;--lg:#f1f5f9;--w:#fff;--gn:#16a34a;--rd:#dc2626}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--s);color:var(--d);line-height:1.6}
-.hero{position:relative;min-height:400px;background:linear-gradient(135deg,var(--o),var(--t));display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background-image:url('https://a.storyblok.com/f/285826016720786/4096x2730/a7e8c06d36/hero-garden-2-bedroom.jpg');background-size:cover;background-position:center;opacity:.2}
+.hero{position:relative;min-height:380px;background:linear-gradient(135deg,var(--o),var(--t));display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background-image:url('https://a.storyblok.com/f/285826016720786/4096x2730/a7e8c06d36/hero-garden-2-bedroom.jpg');background-size:cover;background-position:center;opacity:.18}
 .hero-c{position:relative;z-index:1;padding:2rem;max-width:800px}
-.hero h1{font-size:2.3rem;font-weight:800;margin-bottom:.4rem;text-shadow:0 2px 20px rgba(0,0,0,.3)}
-.hero .sub{font-size:1rem;opacity:.95}
-.hero .td{display:inline-flex;gap:1.2rem;background:rgba(255,255,255,.15);backdrop-filter:blur(10px);padding:.9rem 1.8rem;border-radius:16px;margin-top:1rem;flex-wrap:wrap;justify-content:center}
+.hero h1{font-size:2.2rem;font-weight:800;margin-bottom:.3rem;text-shadow:0 2px 20px rgba(0,0,0,.3)}
+.hero .sub{font-size:.98rem;opacity:.95}
+.hero .td{display:inline-flex;gap:1.2rem;background:rgba(255,255,255,.15);backdrop-filter:blur(10px);padding:.8rem 1.6rem;border-radius:16px;margin-top:.8rem;flex-wrap:wrap;justify-content:center}
 .hero .td div{text-align:center}
-.hero .td .l{font-size:.65rem;text-transform:uppercase;letter-spacing:.05em;opacity:.8}
-.hero .td .v{font-size:.9rem;font-weight:700}
-.alert{background:linear-gradient(90deg,#dcfce7,#bbf7d0);padding:.7rem 2rem;text-align:center;font-size:.85rem;font-weight:600;color:#166534}
-.sec{max-width:1400px;margin:0 auto;padding:2.5rem 2rem}
-.st{font-size:1.55rem;font-weight:800;color:var(--o);margin-bottom:.3rem}
-.ss{color:var(--gr);margin-bottom:1.2rem;font-size:.9rem}
-.tw{overflow-x:auto;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,.08);background:#fff}
-.qt{width:100%;border-collapse:collapse;min-width:900px}
-.qt th{background:var(--o);color:#fff;padding:.8rem .9rem;text-align:left;font-weight:700;font-size:.72rem;text-transform:uppercase;letter-spacing:.03em}
-.qt td{padding:.75rem .9rem;border-bottom:1px solid var(--lg);font-size:.8rem;vertical-align:top}
+.hero .td .l{font-size:.62rem;text-transform:uppercase;letter-spacing:.05em;opacity:.8}
+.hero .td .v{font-size:.88rem;font-weight:700}
+.alert{background:linear-gradient(90deg,#dcfce7,#bbf7d0);padding:.6rem 2rem;text-align:center;font-size:.82rem;font-weight:600;color:#166534}
+/* Tabs */
+.tabs{display:flex;justify-content:center;gap:0;max-width:1400px;margin:0 auto;padding:1.5rem 2rem 0;flex-wrap:wrap}
+.tab{padding:.7rem 1.5rem;border:none;background:var(--lg);color:var(--gr);font-weight:700;font-size:.88rem;cursor:pointer;border-radius:10px 10px 0 0;margin:0 .15rem;transition:all .2s;border-bottom:3px solid transparent}
+.tab:hover{background:var(--sd);color:var(--o)}
+.tab.active{background:#fff;color:var(--o);border-bottom-color:var(--t)}
+.tab span{font-size:.72rem;color:var(--gr);font-weight:400;margin-left:.3rem}
+.tab.active span{color:var(--t)}
+.tab-content{display:none}
+.tab-content.active{display:block}
+.sec{max-width:1400px;margin:0 auto;padding:2rem 2rem 2.5rem}
+.st{font-size:1.5rem;font-weight:800;color:var(--o);margin-bottom:.3rem}
+.ss{color:var(--gr);margin-bottom:1.2rem;font-size:.88rem}
+.tw{overflow-x:auto;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,.08);background:#fff;margin-bottom:1rem}
+.qt{width:100%;border-collapse:collapse;min-width:850px}
+.qt th{background:var(--o);color:#fff;padding:.75rem .85rem;text-align:left;font-weight:700;font-size:.7rem;text-transform:uppercase;letter-spacing:.03em}
+.qt td{padding:.7rem .85rem;border-bottom:1px solid var(--lg);font-size:.78rem;vertical-align:top}
 .qt tr:hover{background:var(--s)}
 .qt .rn{font-weight:700;color:var(--o)}
 .qt .pc{font-weight:700;color:var(--o)}
-.badge{display:inline-block;padding:.15rem .45rem;border-radius:20px;font-size:.64rem;font-weight:600;text-transform:uppercase}
+.badge{display:inline-block;padding:.14rem .42rem;border-radius:20px;font-size:.62rem;font-weight:600;text-transform:uppercase}
 .b-top{background:#dcfce7;color:#166534}
 .b-val{background:#dbeafe;color:#1e40af}
 .b-warn{background:#fee2e2;color:#991b1b}
 .b-fav{background:#fef3c7;color:#92400e}
-.card{background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.08);margin-bottom:2.5rem}
+.card{background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.08);margin-bottom:2rem}
 .card:hover{box-shadow:0 8px 36px rgba(0,0,0,.12)}
-.ct{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem;padding:1.4rem 2rem;border-bottom:1px solid var(--lg)}
-.ct h2{font-size:1.3rem;color:var(--o);font-weight:800}
-.ct .loc{color:var(--gr);font-size:.83rem;margin-top:.2rem}
+.ct{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem;padding:1.3rem 2rem;border-bottom:1px solid var(--lg)}
+.ct h2{font-size:1.25rem;color:var(--o);font-weight:800}
+.ct .loc{color:var(--gr);font-size:.8rem;margin-top:.2rem}
 .ct .rb{text-align:right}
-.ct .rb .sc{font-size:1.5rem;font-weight:800;color:var(--g)}
-.ct .rb .sl{font-size:.7rem;color:var(--gr)}
-.pg{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;padding:1rem 2rem 0}
-.pg img{width:100%;height:135px;object-fit:cover;border-radius:10px}
-.pg .cap{font-size:.68rem;color:var(--gr);margin-top:.15rem;text-align:center}
+.ct .rb .sc{font-size:1.4rem;font-weight:800;color:var(--g)}
+.ct .rb .sl{font-size:.68rem;color:var(--gr)}
+.pg{display:grid;grid-template-columns:repeat(4,1fr);gap:.4rem;padding:.8rem 2rem 0}
+.pg img{width:100%;height:125px;object-fit:cover;border-radius:10px}
+.pg .cap{font-size:.65rem;color:var(--gr);margin-top:.1rem;text-align:center}
 .pi{text-align:center}
-.cb{padding:1.4rem 2rem}
-.desc{color:#334155;font-size:.92rem;margin-bottom:1.1rem;line-height:1.6}
-.rbox{background:var(--s);border-radius:14px;padding:1.2rem;margin-bottom:1.1rem}
-.rbox h3{font-size:.75rem;text-transform:uppercase;letter-spacing:.04em;color:var(--gr);margin-bottom:.5rem;font-weight:700}
-.rbox .rname{font-size:1.02rem;font-weight:700;color:var(--o);margin-bottom:.3rem}
-.rbox .rd{font-size:.84rem;color:var(--d);line-height:1.5}
+.cb{padding:1.3rem 2rem}
+.desc{color:#334155;font-size:.88rem;margin-bottom:1rem;line-height:1.6}
+.rbox{background:var(--s);border-radius:14px;padding:1.1rem;margin-bottom:1rem}
+.rbox h3{font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;color:var(--gr);margin-bottom:.4rem;font-weight:700}
+.rbox .rname{font-size:.98rem;font-weight:700;color:var(--o);margin-bottom:.25rem}
+.rbox .rd{font-size:.82rem;color:var(--d);line-height:1.5}
 .rbox .rd strong{color:var(--o)}
-.sq{display:inline-block;background:var(--o);color:#fff;padding:.2rem .6rem;border-radius:8px;font-size:.82rem;font-weight:700;margin-left:.4rem}
-.pr{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.8rem;margin-bottom:1.1rem}
-.pb{border-radius:14px;padding:1rem;text-align:center}
-.pb .pl{font-size:.66rem;text-transform:uppercase;color:var(--gr);letter-spacing:.04em;margin-bottom:.25rem}
-.pb .pa{font-size:1.25rem;font-weight:800;color:var(--o)}
-.pb .ps{font-size:.72rem;color:var(--gr);margin-top:.15rem}
+.sq{display:inline-block;background:var(--o);color:#fff;padding:.18rem .55rem;border-radius:8px;font-size:.8rem;font-weight:700;margin-left:.3rem}
+.pr{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.7rem;margin-bottom:1rem}
+.pb{border-radius:14px;padding:.9rem;text-align:center}
+.pb .pl{font-size:.64rem;text-transform:uppercase;color:var(--gr);letter-spacing:.04em;margin-bottom:.2rem}
+.pb .pa{font-size:1.15rem;font-weight:800;color:var(--o)}
+.pb .ps{font-size:.7rem;color:var(--gr);margin-top:.1rem}
 .pb.pd{background:var(--s)}
 .pb.pg{background:linear-gradient(135deg,#dcfce7,#bbf7d0)}
 .pb.pg .pa{color:#166534}
 .pb.pw{background:linear-gradient(135deg,#fef3c7,#fde68a)}
 .pb.pw .pa{color:#92400e}
-.am{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:1.1rem}
-.am span{background:var(--lg);padding:.3rem .65rem;border-radius:20px;font-size:.72rem;font-weight:500}
-.ir{font-size:.83rem;color:#334155;margin-bottom:.35rem}
+.am{display:flex;flex-wrap:wrap;gap:.3rem;margin-bottom:1rem}
+.am span{background:var(--lg);padding:.28rem .6rem;border-radius:20px;font-size:.7rem;font-weight:500}
+.ir{font-size:.8rem;color:#334155;margin-bottom:.3rem}
 .ir strong{color:var(--o)}
-.at{display:inline-block;padding:.2rem .5rem;border-radius:8px;font-size:.72rem;font-weight:700}
+.at{display:inline-block;padding:.18rem .45rem;border-radius:8px;font-size:.7rem;font-weight:700}
 .at.g{background:#dcfce7;color:#166534}
 .at.r{background:#fee2e2;color:#991b1b}
 .at.a{background:#fef3c7;color:#92400e}
-.win{background:linear-gradient(135deg,#dcfce7,#bbf7d0);padding:.5rem 1rem;border-radius:10px;margin-bottom:.9rem;font-size:.82rem;color:#166534;font-weight:600}
-.cta{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.3rem}
-.cb-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.5rem 1rem;border-radius:10px;text-decoration:none;font-weight:700;font-size:.82rem}
+.win{background:linear-gradient(135deg,#dcfce7,#bbf7d0);padding:.45rem .9rem;border-radius:10px;margin-bottom:.8rem;font-size:.8rem;color:#166534;font-weight:600}
+.cta{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.3rem}
+.cb-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.45rem .9rem;border-radius:10px;text-decoration:none;font-weight:700;font-size:.78rem}
 .cb-btn.p{background:var(--t);color:#fff}
 .cb-btn.p:hover{background:var(--tl)}
 .cb-btn.s{background:var(--lg);color:var(--o)}
-.note{background:#fef9c3;border-radius:10px;padding:.7rem 1.1rem;font-size:.76rem;color:#854d0e;margin-top:.5rem;line-height:1.5}
-footer{background:var(--o);color:#fff;text-align:center;padding:2rem}
-footer .disc{max-width:800px;margin:0 auto .7rem;font-size:.73rem;opacity:.7;line-height:1.5}
-footer .gen{font-size:.7rem;opacity:.5}
-@media(max-width:768px){.hero h1{font-size:1.55rem}.hero .td{flex-direction:column;gap:.4rem}.pg{grid-template-columns:1fr 1fr}.pr{grid-template-columns:1fr}.ct{flex-direction:column}}
+.note{background:#fef9c3;border-radius:10px;padding:.6rem 1rem;font-size:.74rem;color:#854d0e;margin-top:.5rem;line-height:1.5}
+footer{background:var(--o);color:#fff;text-align:center;padding:1.8rem}
+footer .disc{max-width:800px;margin:0 auto .6rem;font-size:.7rem;opacity:.7;line-height:1.5}
+footer .gen{font-size:.68rem;opacity:.5}
+@media(max-width:768px){.hero h1{font-size:1.5rem}.hero .td{flex-direction:column;gap:.4rem}.pg{grid-template-columns:1fr 1fr}.pr{grid-template-columns:1fr}.ct{flex-direction:column}.tabs{padding:1rem 1rem 0}.tab{font-size:.78rem;padding:.5rem .8rem}}
 </style>
 </head>
 <body>
@@ -100,366 +109,251 @@ footer .gen{font-size:.7rem;opacity:.5}
 </div>
 
 <div class="alert">
-  ✅ Every resort below has a <strong>genuine 2-bedroom suite</strong> — two enclosed bedrooms, living area, single bookable unit. No connecting-room hacks.
+  ✅ Every resort has a <strong>genuine 2-bedroom suite</strong> — two enclosed bedrooms, living area, single bookable unit. No connecting-room hacks.
 </div>
 
-<!-- QUICK COMPARE -->
-<div class="sec">
-  <h2 class="st">Quick Comparison</h2>
-  <p class="ss">All have verified 2-bedroom suites that sleep 5+ in one unit</p>
+<!-- TABS -->
+<div class="tabs">
+  <button class="tab active" onclick="showTab('cancun')">Cancun / Riviera Maya <span>6 resorts</span></button>
+  <button class="tab" onclick="showTab('pv')">Puerto Vallarta <span>4 resorts</span></button>
+  <button class="tab" onclick="showTab('cabo')">Los Cabos <span>3 resorts</span></button>
+</div>
+
+<!-- ===== CANCUN TAB ===== -->
+<div id="cancun" class="tab-content active">
+  <div class="sec">
+    <h2 class="st">Cancun / Riviera Maya</h2>
+    <p class="ss">All within 1 hour of CUN airport · Pre-Christmas pricing (Dec 19–24)</p>
+
+    <div class="tw">
+      <table class="qt">
+        <thead><tr><th>Resort</th><th>TA</th><th>Suite</th><th>Sq Ft</th><th>From CUN</th><th>5 nights AI</th><th>Under $10K?</th></tr></thead>
+        <tbody>
+          <tr><td class="rn">The Royal Cancun <span class="badge b-val">Cheapest</span></td><td>4.5</td><td>2BR Suite</td><td>958</td><td>25 min</td><td class="pc">$6K–$9K</td><td><span style="color:var(--gn);font-weight:700">✅</span></td></tr>
+          <tr><td class="rn">Marina El Cid <span class="badge b-val">Biggest</span></td><td>4.4</td><td>2BR Platinum</td><td>1,400</td><td>25 min</td><td class="pc">$6.5K–$9.5K</td><td><span style="color:var(--gn);font-weight:700">✅</span></td></tr>
+          <tr><td class="rn">The Fives Beach <span class="badge b-top">Your pick</span></td><td>4.5</td><td>2BR Residence</td><td>1,710</td><td>50 min</td><td class="pc">$7.5K–$11K</td><td><span style="color:var(--g);font-weight:700">⚠️</span></td></tr>
+          <tr><td class="rn">Finest Playa Mujeres</td><td>4.5</td><td>Family Suite 2BR</td><td>950</td><td>35 min</td><td class="pc">$8.5K–$12K</td><td><span style="color:var(--g);font-weight:700">⚠️</span></td></tr>
+          <tr><td class="rn">Villa del Palmar Cancun</td><td>4.5</td><td>2BR Residence</td><td>1,690</td><td>30 min</td><td class="pc">$9K–$13K</td><td><span style="color:var(--g);font-weight:700">⚠️</span></td></tr>
+          <tr><td class="rn">Garza Blanca Cancun <span class="badge b-fav">★ Favorite</span></td><td>4.7</td><td>2BR Suite</td><td>1,834</td><td>30 min</td><td class="pc">$10K–$15K</td><td><span style="color:var(--rd);font-weight:700">❌</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Royal Cancun -->
+    <div class="card">
+      <div class="ct"><div><h2>The Royal Cancun All Suites <span class="badge b-val">Best Value</span></h2><div class="loc">📍 Cancun Hotel Zone · 25 min from CUN</div></div><div class="rb"><div class="sc">4.5</div><div class="sl">TA · #42 of 253</div></div></div>
+      <div class="pg">
+        <div class="pi"><img src="https://theroyalcancunallsuites.com/img/big/TRC-two-bedroom-one-bathroom-suite-rv-1.jpg" alt="2BR Suite"><div class="cap">2BR Suite — Living Area</div></div>
+        <div class="pi"><img src="https://theroyalcancunallsuites.com/img/big/TRC-two-bedroom-one-bathroom-suite-rv-2.jpg" alt="Bedroom"><div class="cap">2BR Suite — Bedroom</div></div>
+        <div class="pi"><img src="https://theroyalcancunallsuites.com/img/big/TRC-two-bedroom-one-bathroom-suite-rv-1.jpg" alt="Kitchen"><div class="cap">Full Kitchen</div></div>
+        <div class="pi"><img src="https://a.storyblok.com/f/285826016720786/5749x3833/a30a9f6172/vpcn-facilities-property-07.jpg" alt="Resort"><div class="cap">Resort</div></div>
+      </div>
+      <div class="cb">
+        <div class="win">✅ Cheapest real 2-bedroom — $6K–$9K for 5 nights AI</div>
+        <p class="desc">Apartment-style all-suites resort in a calm section of the Hotel Zone. Every unit has a full kitchen, living/dining area, and balcony. Not the flashiest, but the room layout is exactly right for a family of 5.</p>
+        <div class="rbox"><h3>Suite — Verified from theroyalcancunallsuites.com</h3><div class="rname">Two Bedroom One Bathroom Suite <span class="sq">958 sqft / 89 m²</span></div><div class="rd"><strong>Layout:</strong> Master bedroom (king) + second bedroom (2 twins) + living/dining + full kitchen<br><strong>Extra sleeping:</strong> Two single Murphy beds in living area<br><strong>Max occupancy:</strong> 6 — perfect for 2 adults + 3 kids<br><a href="https://theroyalcancunallsuites.com/suites-and-villas/TRC-two-bedroom-one-bathroom-suite-rv" target="_blank" style="color:var(--t);font-size:.8rem">→ View suite on official site</a></div></div>
+        <div class="am"><span>🍳 Full Kitchen</span><span>🏊 Pools</span><span>🏖️ Calm Beach</span><span>👶 Kids Activities</span><span>🍽️ Restaurants</span></div>
+        <div class="pr"><div class="pb pd"><div class="pl">Family A · 5 nights AI</div><div class="pa">$6,000–$9,000</div><div class="ps">Pre-Xmas range</div></div><div class="pb pd"><div class="pl">Family B · 5 nights AI</div><div class="pa">$6,000–$9,000</div><div class="ps">Same suite</div></div><div class="pb pg"><div class="pl">Both Families</div><div class="pa">$12,000–$18,000</div><div class="ps">Total for 10</div></div></div>
+        <div class="ir"><strong>⚠️ Note:</strong> Confirm AI plan at booking — room-only rates also sold.</div>
+        <div class="cta"><a href="https://theroyalcancunallsuites.com/suites-and-villas/TRC-two-bedroom-one-bathroom-suite-rv" target="_blank" class="cb-btn p">🔗 Suite Details</a><a href="https://www.hiclubvacations.com/royal-cancun" target="_blank" class="cb-btn s">🏨 Book Direct</a></div>
+      </div>
+    </div>
+
+    <!-- Marina El Cid -->
+    <div class="card">
+      <div class="ct"><div><h2>Hotel Marina El Cid <span class="badge b-val">Biggest Suites</span></h2><div class="loc">📍 Puerto Morelos · 25 min from CUN</div></div><div class="rb"><div class="sc">4.4</div><div class="sl">TA · Puerto Morelos</div></div></div>
+      <div class="cb">
+        <div class="win">✅ 1,400+ sqft suites — likely under $10K</div>
+        <p class="desc">Spanish-style beachfront resort with apartment-style suites that feel like condos. Two-bedroom units have full living/dining areas, large balconies, and marina or ocean views.</p>
+        <div class="rbox"><h3>Suite — Verified from elcid.com</h3><div class="rname">Two Bedroom Platinum Suite <span class="sq">1,400–1,500 sqft</span></div><div class="rd"><strong>Layout:</strong> Master bedroom (king) + second bedroom (2 doubles) + full living/dining + kitchenette<br><strong>Max occupancy:</strong> 6–8<br><a href="https://www.elcid.com/marina-beach-hotel" target="_blank" style="color:var(--t);font-size:.8rem">→ View rooms</a></div></div>
+        <div class="am"><span>🏊 Pool with Slides</span><span>🏖️ Beachfront</span><span>🚤 Marina</span><span>👶 Kids Club</span><span>🧖 Spa</span></div>
+        <div class="pr"><div class="pb pd"><div class="pl">Family A · 5 nights</div><div class="pa">$6,500–$9,500</div><div class="ps">Pre-Xmas</div></div><div class="pb pd"><div class="pl">Family B · 5 nights</div><div class="pa">$6,500–$9,500</div><div class="ps">Same suite</div></div><div class="pb pg"><div class="pl">Both Families</div><div class="pa">$13,000–$19,000</div><div class="ps">Total</div></div></div>
+        <div class="cta"><a href="https://www.elcid.com/marina-beach-hotel" target="_blank" class="cb-btn p">🔗 Book Direct</a><a href="https://www.tripadvisor.com/Hotel_Review-g240327-d154545-Reviews-Hotel_Marina_El_Cid_Spa_Beach_Resort-Puerto_Morelos_Yucatan_Peninsula.html" target="_blank" class="cb-btn s">📖 TripAdvisor</a></div>
+      </div>
+    </div>
+
+    <!-- The Fives -->
+    <div class="card">
+      <div class="ct"><div><h2>The Fives Beach <span class="badge b-top">Your Pick</span></h2><div class="loc">📍 Playa del Carmen · 50 min from CUN</div></div><div class="rb"><div class="sc">4.5</div><div class="sl">TA · Playa del Carmen</div></div></div>
+      <div class="cb">
+        <div class="win">✅ 1,710 sqft residences with full kitchens — the room quality benchmark you mentioned</div>
+        <p class="desc">Residence-style hotel where rooms feel like luxury condos. Full kitchens, dining rooms, large terraces, washer/dryers. Multiple pools, beach club, kids club, spa.</p>
+        <div class="rbox"><h3>Suite — Verified from thefiveshotels.com</h3><div class="rname">Two Bedroom Resort Residence <span class="sq">1,710 sqft / 159 m²</span></div><div class="rd"><strong>Layout:</strong> Master bedroom (king) + second bedroom (king or 2 doubles) + full living/dining + full kitchen + terrace<br><strong>Max occupancy:</strong> 6<br><strong>Kitchen:</strong> Full — stove, fridge, dishwasher, cookware<br><a href="https://www.thefiveshotels.com/the-fives-beach" target="_blank" style="color:var(--t);font-size:.8rem">→ View residences</a></div></div>
+        <div class="am"><span>🍳 Full Kitchen + W/D</span><span>🏊 Multiple Pools</span><span>🏖️ Beach Club</span><span>👶 Kids Club</span><span>🧖 Spa</span></div>
+        <div class="pr"><div class="pb pd"><div class="pl">Family A · 5 nights</div><div class="pa">$7,500–$11,000</div><div class="ps">Pre-Xmas lower</div></div><div class="pb pd"><div class="pl">Family B · 5 nights</div><div class="pa">$7,500–$11,000</div><div class="ps">Same residence</div></div><div class="pb pw"><div class="pl">Both Families</div><div class="pa">$15,000–$22,000</div><div class="ps">Under $10K each pre-Xmas</div></div></div>
+        <div class="cta"><a href="https://www.thefiveshotels.com/the-fives-beach" target="_blank" class="cb-btn p">🔗 Book Direct</a><a href="https://www.tripadvisor.com/Hotel_Review-g150812-d6353398-Reviews-The_Fives_Beach_Hotel_Residences-Playa_del_Carmen_Yucatan_Peninsula.html" target="_blank" class="cb-btn s">📖 TripAdvisor</a></div>
+      </div>
+    </div>
+
+    <!-- Garza Blanca Cancun -->
+    <div class="card">
+      <div class="ct"><div><h2>Garza Blanca Cancun <span class="badge b-fav">★ Favorite</span></h2><div class="loc">📍 Costa Mujeres · 30 min from CUN</div></div><div class="rb"><div class="sc">4.7</div><div class="sl">TA · #4 Punta Sam · ~4,560 reviews</div></div></div>
+      <div class="pg">
+        <div class="pi"><img src="https://a.storyblok.com/f/285826016720786/4096x2730/a7e8c06d36/hero-garden-2-bedroom.jpg" alt="2BR Suite"><div class="cap">2BR Suite — Verified</div></div>
+        <div class="pi"><img src="https://a.storyblok.com/f/285826016720786/1920x1280/5ff3a094d9/09_03_24_gbcn_lifestyle_rooftop_couple-5.jpg" alt="Rooftop"><div class="cap">Rooftop</div></div>
+        <div class="pi"><img src="https://a.storyblok.com/f/285826016720786/4096x2862/c90761207e/hero-spa.jpg" alt="Spa"><div class="cap">Spa</div></div>
+        <div class="pi"><img src="https://a.storyblok.com/f/285826016720786/1720x967/e00d8d199f/21-12-14_gbcn_facilities-property-01.webp" alt="Resort"><div class="cap">Resort</div></div>
+      </div>
+      <div class="cb">
+        <div class="win">✅ Your favorite — 1,834 sqft, 3 bathrooms, the best room product on this list</div>
+        <p class="desc">Your historical favorite. The Two Bedroom Suite is verified at 1,834 sqft with 3 bathrooms — the largest and most polished suite on this list. Floating aqua park, kids club, multiple pools, gourmet dining.</p>
+        <div class="rbox"><h3>Suite — Verified from garzablancaresort.com</h3><div class="rname">Two Bedroom Suite <span class="sq">1,834 sqft / 170 m²</span></div><div class="rd"><strong>Layout:</strong> Two separate bedrooms + spacious living area + 3 full bathrooms + large terrace<br><strong>Beds:</strong> 2 kings, or 1 king + 2 queens + sofa bed<br><strong>Max occupancy:</strong> 6<br><a href="https://www.garzablancaresort.com/cancun/suites/two-bedroom" target="_blank" style="color:var(--t);font-size:.8rem">→ View suite</a></div></div>
+        <div class="am"><span>💦 Floating Aqua Park</span><span>👨‍👩‍👧‍👦 Kids Club</span><span>🏊 Multiple Pools</span><span>🍽️ Gourmet Dining</span><span>🚣 Kayaks</span><span>🧖 Spa</span></div>
+        <div class="pr"><div class="pb pd"><div class="pl">Family A · 5 nights</div><div class="pa">$10,000–$15,000</div><div class="ps">Above budget for Christmas</div></div><div class="pb pd"><div class="pl">Family B · 5 nights</div><div class="pa">$10,000–$15,000</div><div class="ps">Pre-Xmas may approach $10K</div></div><div class="pb pw"><div class="pl">Both Families</div><div class="pa">$20,000–$30,000</div><div class="ps">Above cap</div></div></div>
+        <div class="cta"><a href="https://www.garzablancaresort.com/cancun/suites/two-bedroom" target="_blank" class="cb-btn p">🔗 Suite Details</a><a href="https://www.garzablancaresort.com/cancun" target="_blank" class="cb-btn s">🏨 Book Direct</a></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== PUERTO VALLARTA TAB ===== -->
+<div id="pv" class="tab-content">
+  <div class="sec">
+    <h2 class="st">Puerto Vallarta / Riviera Nayarit</h2>
+    <p class="ss">All within 1 hour of PVR airport · Pre-Christmas pricing (Dec 19–24)</p>
+
+    <div class="tw">
+      <table class="qt">
+        <thead><tr><th>Resort</th><th>TA</th><th>Suite</th><th>Sq Ft</th><th>From PVR</th><th>5 nights AI</th><th>Under $10K?</th></tr></thead>
+        <tbody>
+          <tr><td class="rn">Villa del Palmar Flamingos <span class="badge b-val">Cheapest</span></td><td>4.7</td><td>2BR Suite</td><td>1,309</td><td>30 min</td><td class="pc">$4.8K–$7.5K</td><td><span style="color:var(--gn);font-weight:700">✅</span></td></tr>
+          <tr><td class="rn">Velas Vallarta <span class="badge b-val">Closest</span></td><td>4.5</td><td>2BR Family Suite</td><td>1,055</td><td>10 min</td><td class="pc">$6K–$8.5K</td><td><span style="color:var(--gn);font-weight:700">✅</span></td></tr>
+          <tr><td class="rn">Marival Distinct <span class="badge b-top">Top Rated</span></td><td>4.8</td><td>2BR Swim-Up Suite</td><td>1,711</td><td>25 min</td><td class="pc">$6.5K–$9K</td><td><span style="color:var(--gn);font-weight:700">✅</span></td></tr>
+          <tr><td class="rn">Garza Blanca PV <span class="badge b-fav">★ Favorite</span></td><td>4.5</td><td>2BR Panoramic</td><td>3,229</td><td>40 min</td><td class="pc">$7.5K–$10K</td><td><span style="color:var(--gn);font-weight:700">✅</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">💡 <strong>Puerto Vallarta is cheaper than Cancun for comparable quality.</strong> Garza Blanca PV is 3,229 sqft — nearly double the Cancun version — and potentially under $10K.</div>
+
+    <!-- Villa del Palmar Flamingos -->
+    <div class="card">
+      <div class="ct"><div><h2>Villa del Palmar Flamingos <span class="badge b-val">Cheapest in PV</span></h2><div class="loc">📍 Flamingos / Nuevo Nayarit · 30 min from PVR</div></div><div class="rb"><div class="sc">4.7</div><div class="sl">TA · ~7,500 reviews</div></div></div>
+      <div class="cb">
+        <div class="win">✅ Lowest price across ALL regions — $4,800 for 5 nights AI in a 1,309 sqft 2BR</div>
+        <p class="desc">Beachfront resort in the Flamingos area. Large multi-level pool, kids club, daily activities. Sister-resort dining access depending on plan. The value champion for budget-conscious families.</p>
+        <div class="rbox"><h3>Suite — Verified from flamingos.villadelpalmar.com</h3><div class="rname">Two Bedroom Suite <span class="sq">1,309 sqft / 122 m²</span></div><div class="rd"><strong>Layout:</strong> Master bedroom (king) + second enclosed bedroom + separate living/dining + kitchen<br><strong>Bathrooms:</strong> 3<br><strong>Max occupancy:</strong> 4 adults + 2 children or 6 adults<br><a href="https://flamingos.villadelpalmar.com/suites/two-bedroom-suite" target="_blank" style="color:var(--t);font-size:.8rem">→ View suite</a></div></div>
+        <div class="am"><span>🍳 Kitchen</span><span>🏊 Multi-Level Pool</span><span>👶 Kids Club</span><span>🏖️ Beachfront</span><span>🍽️ Sister-Resort Dining</span></div>
+        <div class="pr"><div class="pb pd"><div class="pl">Family A · 5 nights</div><div class="pa">$4,800–$7,500</div><div class="ps">Cheapest in all regions</div></div><div class="pb pd"><div class="pl">Family B · 5 nights</div><div class="pa">$4,800–$7,500</div><div class="ps">Same suite</div></div><div class="pb pg"><div class="pl">Both Families</div><div class="pa">$9,600–$15,000</div><div class="ps">Best total value</div></div></div>
+        <div class="cta"><a href="https://flamingos.villadelpalmar.com/suites/two-bedroom-suite" target="_blank" class="cb-btn p">🔗 Suite Details</a><a href="https://flamingos.villadelpalmar.com/" target="_blank" class="cb-btn s">🏨 Book Direct</a></div>
+      </div>
+    </div>
+
+    <!-- Marival Distinct -->
+    <div class="card">
+      <div class="ct"><div><h2>Marival Distinct All-Suites <span class="badge b-top">Highest Rated</span></h2><div class="loc">📍 Nuevo Nayarit · 25 min from PVR</div></div><div class="rb"><div class="sc">4.8</div><div class="sl">TA · ~6,800 reviews · AAA 4 Diamond</div></div></div>
+      <div class="cb">
+        <div class="win">✅ 4.8 TripAdvisor — highest rating of any resort on this page</div>
+        <p class="desc">AAA Four Diamond luxury all-inclusive with residence-style 2-bedroom suites. Kids and teens clubs, Little Voyagers baby program, Mozzamare Beach Club, access to Marival Emotions. The best quality-to-price ratio in Puerto Vallarta.</p>
+        <div class="rbox"><h3>Suite — Verified from marivaldistinct.com</h3><div class="rname">Two-Bedroom Swim-Up Suite <span class="sq">1,711 sqft / 159 m²</span></div><div class="rd"><strong>Layout:</strong> Master bedroom (king) + second bedroom (2 doubles) + full living/dining + kitchen<br><strong>Max occupancy:</strong> 6–7<br><strong>Special:</strong> Swim-up terrace direct from suite<br><a href="https://www.marivaldistinct.com/superior-retreats/two-bedroom-swim-up" target="_blank" style="color:var(--t);font-size:.8rem">→ View suite</a></div></div>
+        <div class="am"><span>🏊 Swim-Up Terrace</span><span>👶 Kids &amp; Teens Clubs</span><span>👶 Little Voyagers Baby Program</span><span>🏖️ Mozzamare Beach Club</span><span>🍽️ 5+ Restaurants</span><span>🧖 World Spa</span></div>
+        <div class="pr"><div class="pb pd"><div class="pl">Family A · 5 nights</div><div class="pa">$6,500–$9,000</div><div class="ps">Pre-Xmas</div></div><div class="pb pd"><div class="pl">Family B · 5 nights</div><div class="pa">$6,500–$9,000</div><div class="ps">Same suite</div></div><div class="pb pg"><div class="pl">Both Families</div><div class="pa">$13,000–$18,000</div><div class="ps">Total</div></div></div>
+        <div class="cta"><a href="https://www.marivaldistinct.com/superior-retreats/two-bedroom-swim-up" target="_blank" class="cb-btn p">🔗 Suite Details</a><a href="https://www.marivaldistinct.com/" target="_blank" class="cb-btn s">🏨 Book Direct</a></div>
+      </div>
+    </div>
+
+    <!-- Garza Blanca PV -->
+    <div class="card">
+      <div class="ct"><div><h2>Garza Blanca Preserve PV <span class="badge b-fav">★ Favorite Brand</span></h2><div class="loc">📍 South Puerto Vallarta · 40 min from PVR</div></div><div class="rb"><div class="sc">4.5</div><div class="sl">TA · ~4,900 reviews</div></div></div>
+      <div class="cb">
+        <div class="win">✅ 3,229 sqft — nearly DOUBLE the Cancun version — and potentially under $10K</div>
+        <p class="desc">The Garza Blanca you love, but in Puerto Vallarta — and the 2BR is even bigger. 3,229 sqft with 3 bathrooms, large living/dining, and kitchen. Kids club, family pools, beach, kayaking, tennis, spa. AI plan available.</p>
+        <div class="rbox"><h3>Suite — Verified from garzablancaresort.com</h3><div class="rname">Two Bedroom Panoramic Suite <span class="sq">3,229 sqft / 300 m²</span></div><div class="rd"><strong>Layout:</strong> Two enclosed bedrooms + large living/dining + kitchen<br><strong>Beds:</strong> 1 king + 2 queens + sofa<br><strong>Bathrooms:</strong> 3<br><strong>Max occupancy:</strong> 6<br><a href="https://www.garzablancaresort.com/puerto-vallarta/suites/two-bedroom-panoramic-suite" target="_blank" style="color:var(--t);font-size:.8rem">→ View suite</a></div></div>
+        <div class="am"><span>👨‍👩‍👧‍👦 Kids Club</span><span>🏊 Family Pools</span><span>🏖️ Beach</span><span>🚣 Kayaking</span><span>🎾 Tennis</span><span>🧖 Spa</span><span>🍽️ Multiple Restaurants</span></div>
+        <div class="pr"><div class="pb pd"><div class="pl">Family A · 5 nights</div><div class="pa">$7,500–$10,000</div><div class="ps">Pre-Xmas fits budget!</div></div><div class="pb pd"><div class="pl">Family B · 5 nights</div><div class="pa">$7,500–$10,000</div><div class="ps">Same suite</div></div><div class="pb pg"><div class="pl">Both Families</div><div class="pa">$15,000–$20,000</div><div class="ps">Best GB value</div></div></div>
+        <div class="ir"><strong>💡 Key insight:</strong> Garza Blanca PV gives you 3,229 sqft for potentially under $10K — vs 1,834 sqft for $10K-$15K in Cancun. Better room, lower price.</div>
+        <div class="cta"><a href="https://www.garzablancaresort.com/puerto-vallarta/suites/two-bedroom-panoramic-suite" target="_blank" class="cb-btn p">🔗 Suite Details</a><a href="https://www.garzablancaresort.com/puerto-vallarta" target="_blank" class="cb-btn s">🏨 Book Direct</a></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== CABO TAB ===== -->
+<div id="cabo" class="tab-content">
+  <div class="sec">
+    <h2 class="st">Los Cabos</h2>
+    <p class="ss">All within 1 hour of SJD airport · Pre-Christmas pricing (Dec 19–24)</p>
+
+    <div class="tw">
+      <table class="qt">
+        <thead><tr><th>Resort</th><th>TA</th><th>Suite</th><th>Sq Ft</th><th>From SJD</th><th>5 nights AI</th><th>Under $10K?</th></tr></thead>
+        <tbody>
+          <tr><td class="rn">Marina Fiesta <span class="badge b-val">Cheapest</span></td><td>4.5</td><td>Nautical 2BR Suite</td><td>1,300</td><td>45 min</td><td class="pc">$4.5K–$6.8K</td><td><span style="color:var(--gn);font-weight:700">✅</span></td></tr>
+          <tr><td class="rn">Hacienda Encantada Residences <span class="badge b-top">Biggest</span></td><td>4.6</td><td>2BR Luxury Villa</td><td>2,432</td><td>40 min</td><td class="pc">$6.5K–$9.5K</td><td><span style="color:var(--gn);font-weight:700">✅</span></td></tr>
+          <tr><td class="rn">Pueblo Bonito Sunset Beach</td><td>4.5</td><td>2BR Presidential</td><td>~1,944</td><td>50 min</td><td class="pc">$6.5K–$9.5K</td><td><span style="color:var(--gn);font-weight:700">✅</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">⚠️ <strong>Cabo caveat:</strong> Many Cabo resorts are on the Pacific (not swimmable beach). Verify beach conditions if that matters to your family. Marina Fiesta is on the marina, not beachfront.</div>
+
+    <!-- Hacienda Encantada -->
+    <div class="card">
+      <div class="ct"><div><h2>The Residences at Hacienda Encantada <span class="badge b-top">Best in Cabo</span></h2><div class="loc">📍 Tourist Corridor, Cabo San Lucas · 40 min from SJD</div></div><div class="rb"><div class="sc">4.6</div><div class="sl">TA · ~9,600 reviews</div></div></div>
+      <div class="cb">
+        <div class="win">✅ 2,432 sqft 2BR villa with full kitchen, laundry, and terrace — under $10K</div>
+        <p class="desc">Residence-style resort perched on a cliff overlooking the Sea of Cortez. Genuine 2BR duplex villas with full kitchens, living rooms, and large terraces. Multiple pools, children's program, babysitting, spa. AI plan available through the Hacienda Encantada complex.</p>
+        <div class="rbox"><h3>Suite — Verified from haciendaresidences.com</h3><div class="rname">2 Bedroom Luxury Villa <span class="sq">2,432 sqft / 226 m²</span></div><div class="rd"><strong>Layout:</strong> True 2BR duplex — master bedroom (king) + second bedroom (2 queens) + living room + full kitchen + laundry + terrace<br><strong>Max occupancy:</strong> 8<br><strong>Bathrooms:</strong> 3<br><a href="https://haciendaresidences.com/stay/2-bedroom-villa" target="_blank" style="color:var(--t);font-size:.8rem">→ View villa</a></div></div>
+        <div class="am"><span>🍳 Full Kitchen + Laundry</span><span>🏊 Multiple Pools</span><span>👶 Children's Program</span><span>🧖 Spa</span><span>🍽️ Restaurants</span><span>🚐 Shuttle to Restaurants</span></div>
+        <div class="pr"><div class="pb pd"><div class="pl">Family A · 5 nights</div><div class="pa">$6,500–$9,500</div><div class="ps">AI plan — confirm at booking</div></div><div class="pb pd"><div class="pl">Family B · 5 nights</div><div class="pa">$6,500–$9,500</div><div class="ps">Same villa</div></div><div class="pb pg"><div class="pl">Both Families</div><div class="pa">$13,000–$19,000</div><div class="ps">Total</div></div></div>
+        <div class="ir"><strong>⚠️ Note:</strong> AI inclusion is rate-dependent — verify the villa rate explicitly includes all-inclusive.</div>
+        <div class="cta"><a href="https://haciendaresidences.com/stay/2-bedroom-villa" target="_blank" class="cb-btn p">🔗 Villa Details</a><a href="https://haciendaresidences.com/" target="_blank" class="cb-btn s">🏨 Book Direct</a></div>
+      </div>
+    </div>
+
+    <!-- Marina Fiesta -->
+    <div class="card">
+      <div class="ct"><div><h2>Marina Fiesta Resort &amp; Spa <span class="badge b-val">Cheapest in Cabo</span></h2><div class="loc">📍 Cabo San Lucas Marina · 45 min from SJD</div></div><div class="rb"><div class="sc">4.5</div><div class="sl">TA · ~6,700 reviews</div></div></div>
+      <div class="cb">
+        <div class="win">✅ $4,500 for 5 nights AI in a 1,300 sqft 2BR — cheapest across all Cabo options</div>
+        <p class="desc">Right on the Cabo San Lucas marina — walk to restaurants, shops, and nightlife. The 2BR suite has a king, two queens, full kitchen, and separate living/dining. Optional Dine Out All-Inclusive plan gives flexibility.</p>
+        <div class="rbox"><h3>Suite — Verified from marinafiestaresort.com</h3><div class="rname">Nautical Two Bedroom Suite <span class="sq">1,300 sqft / 129 m²</span></div><div class="rd"><strong>Layout:</strong> Master bedroom (king) + second bedroom (2 queens) + separate seating/dining + kitchen<br><strong>Max occupancy:</strong> 6<br><strong>AI:</strong> Optional Dine Out All-Inclusive Plan<br><a href="https://marinafiestaresort.com/" target="_blank" style="color:var(--t);font-size:.8rem">→ View resort</a></div></div>
+        <div class="am"><span>🏊 Marina-Front Pool</span><span>🍺 Swim-Up Bar</span><span>🚶 Walk to Downtown</span><span>🧖 Spa</span><span>🍽️ Marina Dining</span></div>
+        <div class="pr"><div class="pb pd"><div class="pl">Family A · 5 nights</div><div class="pa">$4,500–$6,800</div><div class="ps">With AI plan</div></div><div class="pb pd"><div class="pl">Family B · 5 nights</div><div class="pa">$4,500–$6,800</div><div class="ps">Same suite</div></div><div class="pb pg"><div class="pl">Both Families</div><div class="pa">$9,000–$13,600</div><div class="ps">Best Cabo value</div></div></div>
+        <div class="cta"><a href="https://marinafiestaresort.com/" target="_blank" class="cb-btn p">🔗 Resort Website</a><a href="https://mexgrandhtls.reservhotel.com/win/owa/ibe5.main?Hotel=34000&showhotel=Y" target="_blank" class="cb-btn s">🏨 Book Direct</a></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- CROSS-REGION SUMMARY -->
+<div class="sec" style="padding-top:0">
+  <h2 class="st">Cross-Region Comparison — Best Pick Per Region</h2>
   <div class="tw">
     <table class="qt">
-      <thead>
-        <tr>
-          <th>Resort</th>
-          <th>TA</th>
-          <th>Suite</th>
-          <th>Sq Ft</th>
-          <th>From CUN</th>
-          <th>5 nights (est.)</th>
-          <th>Under $10K?</th>
-        </tr>
-      </thead>
+      <thead><tr><th>Region</th><th>Best Pick</th><th>Suite</th><th>Sq Ft</th><th>5 nights AI</th><th>Why</th></tr></thead>
       <tbody>
-        <tr>
-          <td class="rn">The Royal Cancun <span class="badge b-val">Cheapest</span></td>
-          <td>4.5</td>
-          <td>2BR Suite</td>
-          <td>958</td>
-          <td>25 min</td>
-          <td class="pc">$6,000–$9,000</td>
-          <td><span style="color:var(--gn);font-weight:700">✅ Yes</span></td>
-        </tr>
-        <tr>
-          <td class="rn">Marina El Cid <span class="badge b-val">Biggest suites</span></td>
-          <td>4.4</td>
-          <td>2BR Platinum Suite</td>
-          <td>1,400–1,500</td>
-          <td>25 min</td>
-          <td class="pc">$6,500–$9,500</td>
-          <td><span style="color:var(--gn);font-weight:700">✅ Yes</span></td>
-        </tr>
-        <tr>
-          <td class="rn">The Fives Beach <span class="badge b-top">User pick</span></td>
-          <td>4.5</td>
-          <td>2BR Residence</td>
-          <td>1,710</td>
-          <td>50 min</td>
-          <td class="pc">$7,500–$11,000</td>
-          <td><span style="color:var(--g);font-weight:700">⚠️ Pre-Xmas only</span></td>
-        </tr>
-        <tr>
-          <td class="rn">Finest Playa Mujeres</td>
-          <td>4.5</td>
-          <td>Family Suite (2BR)</td>
-          <td>950</td>
-          <td>35 min</td>
-          <td class="pc">$8,500–$12,000</td>
-          <td><span style="color:var(--g);font-weight:700">⚠️ Pre-Xmas only</span></td>
-        </tr>
-        <tr>
-          <td class="rn">Villa del Palmar Cancun</td>
-          <td>4.5</td>
-          <td>2BR Residence</td>
-          <td>1,690</td>
-          <td>30 min</td>
-          <td class="pc">$9,000–$13,000</td>
-          <td><span style="color:var(--g);font-weight:700">⚠️ Tight</span></td>
-        </tr>
-        <tr>
-          <td class="rn">Garza Blanca Cancun <span class="badge b-fav">★ Favorite</span></td>
-          <td>4.7</td>
-          <td>2BR Suite</td>
-          <td>1,834</td>
-          <td>30 min</td>
-          <td class="pc">$10,000–$15,000</td>
-          <td><span style="color:var(--rd);font-weight:700">❌ Over</span></td>
-        </tr>
+        <tr><td class="rn">Cancun</td><td>The Royal Cancun</td><td>2BR Suite</td><td>958</td><td class="pc">$6K–$9K</td><td>Cheapest in region, full kitchen, 25 min from CUN</td></tr>
+        <tr><td class="rn">Puerto Vallarta</td><td>Marival Distinct</td><td>2BR Swim-Up</td><td>1,711</td><td class="pc">$6.5K–$9K</td><td>4.8 TA rating, swim-up terrace, AAA 4-Diamond</td></tr>
+        <tr><td class="rn">Los Cabos</td><td>Hacienda Encantada</td><td>2BR Villa</td><td>2,432</td><td class="pc">$6.5K–$9.5K</td><td>Biggest suites, cliff views, full kitchen + laundry</td></tr>
+        <tr><td class="rn">All Regions</td><td>Villa del Palmar Flamingos (PV)</td><td>2BR Suite</td><td>1,309</td><td class="pc">$4.8K–$7.5K</td><td>🏆 Absolute cheapest — 4.7 TA, 3 baths, beachfront</td></tr>
+        <tr><td class="rn">Bonus: GB Brand</td><td>Garza Blanca PV</td><td>2BR Panoramic</td><td>3,229</td><td class="pc">$7.5K–$10K</td><td>★ Your favorite brand, biggest suite, fits budget</td></tr>
       </tbody>
     </table>
   </div>
-  <div class="note">
-    💡 <strong>Pre-Christmas (Dec 19–24) is dramatically cheaper</strong> than Christmas-to-New-Year. All estimates assume pre-Christmas dates. New Year's week adds 30-50%.
-  </div>
-</div>
-
-<!-- DETAILED CARDS -->
-<div class="sec" style="padding-top:0">
-  <h2 class="st">Detailed Resort Profiles</h2>
-
-  <!-- 1. THE ROYAL CANCUN -->
-  <div class="card">
-    <div class="ct">
-      <div>
-        <h2>The Royal Cancun All Suites Resort <span class="badge b-val">Best Value</span></h2>
-        <div class="loc">📍 Cancun Hotel Zone · 25 min / 13 mi from CUN</div>
-      </div>
-      <div class="rb"><div class="sc">4.5</div><div class="sl">TA · #42 of 253 Cancun</div></div>
-    </div>
-    <div class="pg">
-      <div class="pi"><img src="https://theroyalcancunallsuites.com/img/home-big/the-royal-cancun-home-1.jpg" alt="Beachfront exterior"><div class="cap">Beachfront Resort</div></div>
-      <div class="pi"><img src="https://theroyalcancunallsuites.com/img/big/TRC-two-bedroom-two-bathroom-suite-bf-1.jpg?v=1" alt="2BR Beachfront Suite"><div class="cap">2BR Beachfront Suite</div></div>
-      <div class="pi"><img src="https://theroyalcancunallsuites.com/img/medium/the-royal-cancun-home-6.jpg" alt="Family beach"><div class="cap">Family Beach Area</div></div>
-      <div class="pi"><img src="https://theroyalcancunallsuites.com/img/big/TRC-two-bedroom-one-bathroom-suite-rv-1.jpg" alt="2BR Suite interior"><div class="cap">2BR Suite Interior</div></div>
-    </div>
-    <div class="cb">
-      <div class="win">✅ Cheapest option with a real 2-bedroom — $6K–$9K for 5 nights AI</div>
-      <p class="desc">Apartment-style all-suites resort in a calm section of the Hotel Zone. Every unit has a full kitchen, living/dining area, and balcony. Not the flashiest resort, but the room layout is exactly what you want for a family of 5, and the price is right.</p>
-      <div class="rbox">
-        <h3>Suite — Verified from theroyalcancunallsuites.com</h3>
-        <div class="rname">Two Bedroom One Bathroom Suite <span class="sq">958 sqft / 89 m²</span></div>
-        <div class="rd">
-          <strong>Layout:</strong> Master bedroom (king) + second bedroom (2 twins) + living/dining + full kitchen<br>
-          <strong>Extra sleeping:</strong> Two single Murphy beds in living area<br>
-          <strong>Max occupancy:</strong> 6 — perfect for 2 adults + 3 kids<br>
-          <strong>Bathroom:</strong> 1 full bath<br>
-          <a href="https://theroyalcancunallsuites.com/suites-and-villas/TRC-two-bedroom-one-bathroom-suite-rv" target="_blank" style="color:var(--t);font-size:.82rem">→ View suite on official site</a>
-        </div>
-      </div>
-      <div class="am"><span>🍳 Full Kitchen</span><span>🏊 Pools</span><span>🏖️ Calm Beach</span><span>👶 Kids Activities</span><span>🍽️ Restaurants</span><span>⚽ Sports</span></div>
-      <div class="pr">
-        <div class="pb pd"><div class="pl">Family A · 5 nights AI</div><div class="pa">$6,000–$9,000</div><div class="ps">Dec 19–24 pre-Xmas range</div></div>
-        <div class="pb pd"><div class="pl">Family B · 5 nights AI</div><div class="pa">$6,000–$9,000</div><div class="ps">Same suite type</div></div>
-        <div class="pb pg"><div class="pl">Both Families</div><div class="pa">$12,000–$18,000</div><div class="ps">Total for 10 guests</div></div>
-      </div>
-      <div class="ir"><strong>⚠️ Note:</strong> Confirm all-inclusive plan at booking — room-only rates also sold here.</div>
-      <div class="cta">
-        <a href="https://theroyalcancunallsuites.com/suites-and-villas/TRC-two-bedroom-one-bathroom-suite-rv" target="_blank" class="cb-btn p">🔗 Suite Details</a>
-        <a href="https://www.hiclubvacations.com/royal-cancun" target="_blank" class="cb-btn s">🏨 Book Direct</a>
-        <a href="https://www.tripadvisor.com/Hotel_Review-g150807-d152890-Reviews-Wyndham_Alltra_Cancun-Cancun_Yucatan_Peninsula.html" target="_blank" class="cb-btn s">📖 TripAdvisor</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- 2. MARINA EL CID -->
-  <div class="card">
-    <div class="ct">
-      <div>
-        <h2>Hotel Marina El Cid Spa &amp; Beach Resort <span class="badge b-val">Biggest Suites</span></h2>
-        <div class="loc">📍 Puerto Morelos · 25 min / 16 mi from CUN</div>
-      </div>
-      <div class="rb"><div class="sc">4.4</div><div class="sl">TA · Puerto Morelos</div></div>
-    </div>
-    <div class="pg">
-      <div class="pi"><img src="https://5c0edddc27c1b18cb408-e903dbaf8f4fbedfc5e5d381209e9314.ssl.cf1.rackcdn.com/u/family-at-hotel-marina-el-cid.jpg" alt="Beachfront"><div class="cap">Beachfront Resort</div></div>
-      <div class="pi"><img src="https://5c0edddc27c1b18cb408-e903dbaf8f4fbedfc5e5d381209e9314.ssl.cf1.rackcdn.com/u/rooms/Luxury-room.jpg" alt="Luxury room"><div class="cap">Luxury Room</div></div>
-      <div class="pi"><img src="https://5c0edddc27c1b18cb408-e903dbaf8f4fbedfc5e5d381209e9314.ssl.cf1.rackcdn.com/u/puerto-morelos-structures-on-beach.jpg" alt="Beach"><div class="cap">Puerto Morelos Beach</div></div>
-    </div>
-    <div class="cb">
-      <div class="win">✅ Largest verified 2-bedroom suites (1,400+ sqft) likely under $10K</div>
-      <p class="desc">Spanish-style beachfront resort with apartment-style suites that feel like condos. The two-bedroom units have full living/dining areas, large balconies, and marina or ocean views. Kids get a nice pool complex with slides, plus beach access with calm water.</p>
-      <div class="rbox">
-        <h3>Suite — Verified from elcid.com</h3>
-        <div class="rname">Two Bedroom Platinum Suite <span class="sq">1,400–1,500 sqft / 130–139 m²</span></div>
-        <div class="rd">
-          <strong>Layout:</strong> Master bedroom (king) + second bedroom (2 doubles) + full living/dining + kitchenette<br>
-          <strong>Extra sleeping:</strong> Murphy bed or sofa bed in living area<br>
-          <strong>Max occupancy:</strong> 6–8 depending on category<br>
-          <strong>View:</strong> Marina, ocean, or garden depending on tier<br>
-          <a href="https://www.elcid.com/marina-beach-hotel" target="_blank" style="color:var(--t);font-size:.82rem">→ View rooms on official site</a>
-        </div>
-      </div>
-      <div class="am"><span>🏊 Pool with Slides</span><span>🏖️ Beachfront</span><span>🚤 Marina</span><span>👶 Kids Club</span><span>🧖 Spa</span><span>🍽️ Multiple Restaurants</span><span>⚓ Water Sports</span></div>
-      <div class="pr">
-        <div class="pb pd"><div class="pl">Family A · 5 nights AI</div><div class="pa">$6,500–$9,500</div><div class="ps">Dec 19–24 pre-Xmas range</div></div>
-        <div class="pb pd"><div class="pl">Family B · 5 nights AI</div><div class="pa">$6,500–$9,500</div><div class="ps">Same suite category</div></div>
-        <div class="pb pg"><div class="pl">Both Families</div><div class="pa">$13,000–$19,000</div><div class="ps">Total for 10 guests</div></div>
-      </div>
-      <div class="ir"><strong>⚠️ Note:</strong> Ensure booking says "Two Bedroom Suite" — the "Family Room" is a smaller category without the full second enclosed bedroom.</div>
-      <div class="cta">
-        <a href="https://www.elcid.com/marina-beach-hotel" target="_blank" class="cb-btn p">🔗 Book Direct</a>
-        <a href="https://www.tripadvisor.com/Hotel_Review-g240327-d154545-Reviews-Hotel_Marina_El_Cid_Spa_Beach_Resort-Puerto_Morelos_Yucatan_Peninsula.html" target="_blank" class="cb-btn s">📖 TripAdvisor</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- 3. THE FIVES -->
-  <div class="card">
-    <div class="ct">
-      <div>
-        <h2>The Fives Beach Hotel &amp; Residences <span class="badge b-top">Your Pick</span></h2>
-        <div class="loc">📍 Playa del Carmen · 50 min / 34 mi from CUN</div>
-      </div>
-      <div class="rb"><div class="sc">4.5</div><div class="sl">TA · Playa del Carmen</div></div>
-    </div>
-    <div class="pg">
-      <div class="pi"><img src="https://cdn2.paraty.es/fives-beach/images/37dc83b1e702bba" alt="Infinity pool"><div class="cap">Infinity Pool</div></div>
-      <div class="pi"><img src="https://cdn2.paraty.es/fives-beach/images/9525e504fe9e8fc" alt="Guest room"><div class="cap">Deluxe Room</div></div>
-      <div class="pi"><img src="https://storage.googleapis.com/cdn.paraty.es/fives-corpo/files/restaurants-beach-hotel.jpg" alt="Dining"><div class="cap">Resort Dining</div></div>
-    </div>
-    <div class="cb">
-      <div class="win">✅ The room quality benchmark you mentioned — 1,710 sqft residences with full kitchens</div>
-      <p class="desc">Residence-style hotel where rooms feel like luxury condos. The 2-bedroom residences have full kitchens, dining rooms, large terraces, and washer/dryers. Multiple pools, beach club, kids club, spa. The best "apartment feel" of any resort on this list.</p>
-      <div class="rbox">
-        <h3>Suite — Verified from thefiveshotels.com</h3>
-        <div class="rname">Two Bedroom Resort Residence <span class="sq">1,710 sqft / 159 m²</span></div>
-        <div class="rd">
-          <strong>Layout:</strong> Master bedroom (king) + second bedroom (king or 2 doubles) + full living/dining + full kitchen + terrace<br>
-          <strong>Extra sleeping:</strong> Sofa bed in living room<br>
-          <strong>Max occupancy:</strong> 6<br>
-          <strong>Kitchen:</strong> Full — stove, fridge, dishwasher, cookware<br>
-          <strong>Other:</strong> Washer/dryer, large balcony<br>
-          <a href="https://www.thefiveshotels.com/the-fives-beach" target="_blank" style="color:var(--t);font-size:.82rem">→ View residences on official site</a>
-        </div>
-      </div>
-      <div class="am"><span>🍳 Full Kitchen + W/D</span><span>🏊 Multiple Pools</span><span>🏖️ Beach Club</span><span>👶 Kids Club</span><span>🧖 Spa</span><span>🍽️ Restaurants</span><span>🍸 Bars</span><span>🏋️ Fitness</span></div>
-      <div class="pr">
-        <div class="pb pd"><div class="pl">Family A · 5 nights AI</div><div class="pa">$7,500–$11,000</div><div class="ps">Pre-Xmas lower, NYE higher</div></div>
-        <div class="pb pd"><div class="pl">Family B · 5 nights AI</div><div class="pa">$7,500–$11,000</div><div class="ps">Same residence type</div></div>
-        <div class="pb pw"><div class="pl">Both Families</div><div class="pa">$15,000–$22,000</div><div class="ps">Under $10K each if pre-Xmas</div></div>
-      </div>
-      <div class="ir"><strong>⚠️ Budget note:</strong> Likely fits under $10K/family for Dec 19–24. New Year's week will exceed $10K.</div>
-      <div class="cta">
-        <a href="https://www.thefiveshotels.com/the-fives-beach" target="_blank" class="cb-btn p">🔗 Book Direct</a>
-        <a href="https://www.tripadvisor.com/Hotel_Review-g150812-d6353398-Reviews-The_Fives_Beach_Hotel_Residences-Playa_del_Carmen_Yucatan_Peninsula.html" target="_blank" class="cb-btn s">📖 TripAdvisor</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- 4. FINEST PLAYA MUJERES -->
-  <div class="card">
-    <div class="ct">
-      <div>
-        <h2>Finest Playa Mujeres <span class="badge b-top">Best for Families</span></h2>
-        <div class="loc">📍 Playa Mujeres · 35 min / 22 mi from CUN</div>
-      </div>
-      <div class="rb"><div class="sc">4.5</div><div class="sl">TA · Playa Mujeres</div></div>
-    </div>
-    <div class="pg">
-      <div class="pi"><img src="https://52efe9fcc4d4255a3e14-4b65870d4fb22f8d702ba22b9ca688b8.ssl.cf1.rackcdn.com/u/FPM_Pool_Overview_LR.jpg" alt="Pool"><div class="cap">Main Pool</div></div>
-      <div class="pi"><img src="https://84c1b501fde61dba63bc-fa6d706bb129c036124b532437347c9f.ssl.cf1.rackcdn.com/responsive/4:3/750px/u/hero-images-suites/cancun-suites.jpg" alt="Suite"><div class="cap">Suite Interior</div></div>
-      <div class="pi"><img src="https://52efe9fcc4d4255a3e14-4b65870d4fb22f8d702ba22b9ca688b8.ssl.cf1.rackcdn.com/u/_bodas/Flowers-of-a-beach-wedding-ceremony-in-finest-playa-mujeres.jpg" alt="Beach"><div class="cap">Beach Area</div></div>
-    </div>
-    <div class="cb">
-      <p class="desc">By the Excellence Group (but family-friendly, not adults-only). The Finest Family Suite has an enclosed parents' bedroom and a separate children's bedroom plus a lounge — a genuine 2-bedroom-style layout. Excellent kids club, multiple pools, good food. Consistently rated one of the best family resorts in the area.</p>
-      <div class="rbox">
-        <h3>Suite — Verified from finestresorts.com</h3>
-        <div class="rname">Finest Family Suite <span class="sq">950 sqft / 88 m²</span></div>
-        <div class="rd">
-          <strong>Layout:</strong> Master bedroom (king) + children's bedroom (2 twins) + separate lounge/living area<br>
-          <strong>Extra sleeping:</strong> Sofa in lounge area<br>
-          <strong>Max occupancy:</strong> 5 (2 adults + 3 children) — designed for exactly your family size<br>
-          <a href="https://www.finestresorts.com/cancun/finest-playa-mujeres/finest-family-suite/" target="_blank" style="color:var(--t);font-size:.82rem">→ View suite on official site</a>
-        </div>
-      </div>
-      <div class="am"><span>👶 Finest Kids Club</span><span>🎮 Teens Club</span><span>🏊 Multiple Pools</span><span>🏖️ Beachfront</span><span>🍽️ 10 Restaurants</span><span>🛎️ 24hr Room Service</span><span>🧖 Spa</span></div>
-      <div class="pr">
-        <div class="pb pd"><div class="pl">Family A · 5 nights AI</div><div class="pa">$8,500–$12,000</div><div class="ps">Pre-Xmas may fit under $10K</div></div>
-        <div class="pb pd"><div class="pl">Family B · 5 nights AI</div><div class="pa">$8,500–$12,000</div><div class="ps">Designed for 2ad+3ch exactly</div></div>
-        <div class="pb pw"><div class="pl">Both Families</div><div class="pa">$17,000–$24,000</div><div class="ps">Tight for $10K cap</div></div>
-      </div>
-      <div class="cta">
-        <a href="https://www.finestresorts.com/cancun/finest-playa-mujeres/finest-family-suite/" target="_blank" class="cb-btn p">🔗 Suite Details</a>
-        <a href="https://www.finestresorts.com/cancun/finest-playa-mujeres/" target="_blank" class="cb-btn s">🏨 Resort Website</a>
-        <a href="https://www.tripadvisor.com/Hotel_Review-g1229340-d8393456-Reviews-Finest_Playa_Mujeres-Playa_Mujeres_Costa_Mujeres_Yucatan_Peninsula.html" target="_blank" class="cb-btn s">📖 TripAdvisor</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- 5. GARZA BLANCA -->
-  <div class="card">
-    <div class="ct">
-      <div>
-        <h2>Garza Blanca Cancun <span class="badge b-fav">★ Your Favorite</span></h2>
-        <div class="loc">📍 Costa Mujeres · 30 min / 19 mi from CUN</div>
-      </div>
-      <div class="rb"><div class="sc">4.7</div><div class="sl">TA · #4 Punta Sam · ~4,560 reviews</div></div>
-    </div>
-    <div class="pg">
-      <div class="pi"><img src="https://a.storyblok.com/f/285826016720786/4096x2730/a7e8c06d36/hero-garden-2-bedroom.jpg" alt="2BR Suite"><div class="cap">2BR Suite — Verified</div></div>
-      <div class="pi"><img src="https://a.storyblok.com/f/285826016720786/1920x1280/5ff3a094d9/09_03_24_gbcn_lifestyle_rooftop_couple-5.jpg" alt="Rooftop"><div class="cap">Rooftop Amenities</div></div>
-      <div class="pi"><img src="https://a.storyblok.com/f/285826016720786/4096x2862/c90761207e/hero-spa.jpg" alt="Spa"><div class="cap">Resort Spa</div></div>
-      <div class="pi"><img src="https://a.storyblok.com/f/285826016720786/1720x967/e00d8d199f/21-12-14_gbcn_facilities-property-01.webp" alt="Resort"><div class="cap">Resort Exterior</div></div>
-    </div>
-    <div class="cb">
-      <div class="win">✅ You already know and love this resort — now with verified 2BR specs</div>
-      <p class="desc">Your historical favorite. The Two Bedroom Suite is verified at 1,834 sqft with 3 bathrooms — the largest and most polished suite on this list. If budget stretches, this is the best physical room product. Floating aqua park, kids club, multiple pools, gourmet dining.</p>
-      <div class="rbox">
-        <h3>Suite — Verified from garzablancaresort.com</h3>
-        <div class="rname">Two Bedroom Suite <span class="sq">1,834 sqft / 170 m²</span></div>
-        <div class="rd">
-          <strong>Layout:</strong> Two separate bedrooms + spacious living area + 3 full bathrooms + large terrace<br>
-          <strong>Beds:</strong> 2 kings, or 1 king + 2 queens + sofa bed<br>
-          <strong>Max occupancy:</strong> 6<br>
-          <strong>Bathrooms:</strong> 3 (rare for suite category)<br>
-          <a href="https://www.garzablancaresort.com/cancun/suites/two-bedroom" target="_blank" style="color:var(--t);font-size:.82rem">→ View suite on official site</a>
-        </div>
-      </div>
-      <div class="am"><span>💦 Floating Aqua Park</span><span>👨‍👩‍👧‍👦 Kids Club</span><span>🏊 Multiple Pools</span><span>🍽️ Gourmet Dining</span><span>🚣 Kayaks &amp; Paddleboards</span><span>🧖 Spa</span><span>🏖️ Private Beach</span></div>
-      <div class="pr">
-        <div class="pb pd"><div class="pl">Family A · 5 nights AI</div><div class="pa">$10,000–$15,000</div><div class="ps">Likely above budget for Christmas</div></div>
-        <div class="pb pd"><div class="pl">Family B · 5 nights AI</div><div class="pa">$10,000–$15,000</div><div class="ps">Pre-Xmas may approach $10K</div></div>
-        <div class="pb pw"><div class="pl">Both Families</div><div class="pa">$20,000–$30,000</div><div class="ps">Above $10K/family cap</div></div>
-      </div>
-      <div class="ir"><strong>Reality check:</strong> Over the $10K target for Christmas. Listed because you love it and the 2BR is genuinely the best room on this list. Could work if dates shift to pre-Christmas or budget flexes.</div>
-      <div class="cta">
-        <a href="https://www.garzablancaresort.com/cancun/suites/two-bedroom" target="_blank" class="cb-btn p">🔗 Suite Details</a>
-        <a href="https://www.garzablancaresort.com/cancun" target="_blank" class="cb-btn s">🏨 Book Direct</a>
-        <a href="https://www.tripadvisor.com/Hotel_Review-g7983226-d21401702-Reviews-Garza_Blanca_Resort_Spa_Cancun-Punta_Sam_Costa_Mujeres_Yucatan_Peninsula.html" target="_blank" class="cb-btn s">📖 TripAdvisor</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- 6. VILLA DEL PALMAR -->
-  <div class="card">
-    <div class="ct">
-      <div>
-        <h2>Villa del Palmar Cancun</h2>
-        <div class="loc">📍 Bahia de Mujeres · 30 min / 19 mi from CUN</div>
-      </div>
-      <div class="rb"><div class="sc">4.5</div><div class="sl">TA · Cancun</div></div>
-    </div>
-    <div class="pg">
-      <div class="pi"><img src="https://a.storyblok.com/f/285826016720786/1920x1438/4bf1440229/tafer_mscn_aerials_property-1.jpg" alt="Aerial"><div class="cap">Aerial View</div></div>
-      <div class="pi"><img src="https://a.storyblok.com/f/285826016720786/4000x2667/92a72bf747/23-10-22_vpcn_suites_deluxe-ocean-view-01.jpg" alt="Deluxe suite"><div class="cap">Deluxe Ocean View Suite</div></div>
-      <div class="pi"><img src="https://a.storyblok.com/f/285826016720786/2000x1333/d970791ed1/pool-villa-del-palmar-cancun-optimized.webp" alt="Pool"><div class="cap">Resort Pool</div></div>
-    </div>
-    <div class="cb">
-      <p class="desc">Residence-style resort on a quiet beach north of Cancun. The 2BR residences (1,690 sqft) have full kitchens, large living areas, and big balconies. AI plan optional. Could squeak under $10K with a pre-Christmas promotion.</p>
-      <div class="rbox">
-        <h3>Suite — Verified from villapalmarcancun.com</h3>
-        <div class="rname">Two Bedroom Residence <span class="sq">1,690 sqft / 157 m²</span></div>
-        <div class="rd">
-          <strong>Layout:</strong> Master bedroom (king) + second bedroom (2 queens) + full living/dining + full kitchen<br>
-          <strong>Max occupancy:</strong> 6<br>
-          <strong>Kitchen:</strong> Full — stove, fridge, dishwasher<br>
-          <a href="https://www.villapalmarcancun.com/" target="_blank" style="color:var(--t);font-size:.82rem">→ View residences</a>
-        </div>
-      </div>
-      <div class="am"><span>🍳 Full Kitchen</span><span>🏊 Pools</span><span>🏖️ Quiet Beach</span><span>👶 Kids Club</span><span>🧖 Spa</span><span>🍽️ Restaurants</span></div>
-      <div class="pr">
-        <div class="pb pd"><div class="pl">Family A · 5 nights AI</div><div class="pa">$9,000–$13,000</div><div class="ps">Promo-dependent</div></div>
-        <div class="pb pd"><div class="pl">Family B · 5 nights AI</div><div class="pa">$9,000–$13,000</div><div class="ps">Same residence</div></div>
-        <div class="pb pw"><div class="pl">Both Families</div><div class="pa">$18,000–$26,000</div><div class="ps">Tight for $10K cap</div></div>
-      </div>
-      <div class="cta">
-        <a href="https://www.villapalmarcancun.com/" target="_blank" class="cb-btn p">🔗 Book Direct</a>
-        <a href="https://www.tripadvisor.com/Hotel_Review-g150807-d2351936-Reviews-Villa_del_Palmar_Cancun-Cancun_Yucatan_Peninsula.html" target="_blank" class="cb-btn s">📖 TripAdvisor</a>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<!-- SUMMARY -->
-<div class="sec" style="padding-top:0">
-  <h2 class="st">My Recommendation</h2>
-  <div class="note" style="font-size:.88rem;line-height:1.7;padding:1rem 1.3rem">
-    <p style="margin-bottom:.6rem"><strong>📅 Go pre-Christmas (Dec 19–24).</strong> Every resort fits the budget much better before Christmas Eve. New Year's week is 30-50% more.</p>
-    <p style="margin-bottom:.6rem"><strong>🏆 Best value 2BR: The Royal Cancun</strong> — $6K–$9K for 5 nights, 958 sqft, full kitchen, 25 min from airport. Cheapest real 2-bedroom.</p>
-    <p style="margin-bottom:.6rem"><strong>📐 Biggest suites: Marina El Cid</strong> — 1,400–1,500 sqft for $6.5K–$9.5K. Puerto Morelos, 25 min from CUN.</p>
-    <p style="margin-bottom:.6rem"><strong>✨ Your pick: The Fives Beach</strong> — 1,710 sqft residences with full kitchens, $7.5K–$11K. Likely fits under $10K pre-Christmas.</p>
-    <p style="margin-bottom:.6rem"><strong>👨‍👩‍👧‍👦 Best for exactly 5: Finest Playa Mujeres</strong> — Family Suite designed for 2 adults + 3 kids, 950 sqft. Premium option.</p>
-    <p><strong>★ If budget flexes: Garza Blanca</strong> — 1,834 sqft, 3 bathrooms, the room you already love. $10K–$15K at Christmas. The best physical product on this list.</p>
+  <div class="note" style="font-size:.85rem;line-height:1.7;padding:.8rem 1.2rem">
+    <p style="margin-bottom:.5rem"><strong>🏆 Overall winner: Garza Blanca Puerto Vallarta.</strong> 3,229 sqft (biggest suite verified), 3 bathrooms, the brand you already love, and potentially under $10K/family for pre-Christmas dates. That's nearly double the space of the Cancun GB at 2/3 the price.</p>
+    <p style="margin-bottom:.5rem"><strong>💰 Absolute cheapest: Villa del Palmar Flamingos (PV)</strong> at $4,800 for 5 nights. 4.7 TA rating, 1,309 sqft, 3 bathrooms, beachfront.</p>
+    <p><strong>📅 All prices assume pre-Christmas (Dec 19–24). New Year's week adds 30–50%.</strong></p>
   </div>
 </div>
 
 <footer>
   <div class="disc">
-    <strong>Sources:</strong> Room sizes verified from official resort websites (theroyalcancunallsuites.com, elcid.com, thefiveshotels.com, finestresorts.com, garzablancaresort.com, villapalmarcancun.com) on July 25, 2026. All photos extracted from official site page source and verified HTTP 200. Prices are holiday planning ranges — not live confirmed quotes. Christmas/NYE pricing is volatile; book early. All-inclusive plan must be confirmed at booking for Royal Cancun and Villa del Palmar (room-only rates also sold). Square footage from official sources where available; Marina El Cid from third-party sellers (official page partially JS-blocked).
+    <strong>Sources:</strong> Room sizes verified from official resort websites (theroyalcancunallsuites.com, elcid.com, thefiveshotels.com, finestresorts.com, garzablancaresort.com, villapalmarcancun.com, flamingos.villadelpalmar.com, marivaldistinct.com, velasvallarta.com, haciendaresidences.com, marinafiestaresort.com, pueblobonito.com) on July 25, 2026. All photos extracted from official site page source. Prices are holiday planning ranges — not live confirmed quotes. Pre-Christmas (Dec 19–24) is significantly cheaper than New Year's week. All-inclusive plan must be confirmed at booking for Royal Cancun, Villa del Palmar, and Hacienda Encantada (room-only rates also sold). Marina Fiesta AI is optional Dine-Out plan. Pueblo Bonito Presidential Suite inventory may be ownership — confirm direct-bookable unit.
   </div>
-  <div class="gen">Generated July 25, 2026 · Verified room specs &amp; photos · Prices in USD</div>
+  <div class="gen">Generated July 25, 2026 · 3 regions · 13 resorts · Verified room specs &amp; photos · Prices in USD</div>
 </footer>
+
+<script>
+function showTab(id){
+  document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  event.target.closest('.tab').classList.add('active');
+}
+</script>
 
 </body>
 </html>
